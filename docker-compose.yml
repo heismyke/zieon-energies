@@ -1,0 +1,26 @@
+services:
+  # --- Customer Interface Unit Frontend ---
+  customer-interface-unit-frontend:
+    container_name: customer-interface-unit
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: ciu/frontend:dev
+    working_dir: /app
+    volumes:
+      - .:/app:ro
+      - node_modules:/app/node_modules
+    ports:
+      - "5175:5175"
+    environment:
+      VITE_BASE_URL: http://localhost:5175/
+      VITE_API_URL: http://localhost:3000/api
+    networks:
+      - customer-interface-unit-net
+
+volumes:
+  node_modules:
+
+networks:
+  customer-interface-unit-net:
+    driver: bridge
