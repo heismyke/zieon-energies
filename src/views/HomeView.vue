@@ -110,7 +110,7 @@ const features: Feature[] = [
                     class="text-base sm:text-lg md:text-xl text-white/60 mb-12 leading-relaxed max-w-3xl mx-auto"
                 >
                     Buy tokens, share units, and monitor your power consumption
-                    from your phone. No more queues, no more scratched cards.
+                    from your phone.
                 </p>
                 <div class="flex gap-4 justify-center flex-wrap">
                     <button class="btn-primary">Download App</button>
