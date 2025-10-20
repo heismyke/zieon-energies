@@ -26,39 +26,39 @@ interface Feature {
 
 const features: Feature[] = [
     {
-        title: "Digital Tokens",
+        title: "Buy Tokens Instantly",
         description:
-            "Seamlessly purchase and manage electricity tokens through an intuitive digital interface.",
+            "Purchase prepaid electricity tokens from AEDC, EKEDC, IKEDC, and other Nigerian DisCos directly from your phone.",
         icon: BoltIcon,
     },
     {
-        title: "Unit Sharing",
+        title: "Share Units",
         description:
-            "Share electricity units with family and friends across Nigeria instantly.",
+            "Send electricity units to family and friends anywhere in Nigeria. No need for physical tokens or scratch cards.",
         icon: ArrowPathIcon,
     },
     {
-        title: "Smart Analytics",
+        title: "Monitor Your Usage",
         description:
-            "Track your consumption with real-time analytics and intelligent insights.",
+            "Track how much power you're consuming daily, weekly, and monthly. See which appliances use the most electricity.",
         icon: ChartBarIcon,
     },
     {
-        title: "Appliance Management",
+        title: "Manage Appliances",
         description:
-            "Monitor and control your appliances with precision and ease.",
+            "Control your home appliances remotely and set schedules to save electricity during high-cost periods.",
         icon: HomeModernIcon,
     },
     {
-        title: "Live Updates",
+        title: "Power Outage Alerts",
         description:
-            "Stay informed about maintenance schedules and service updates from your provider.",
+            "Get instant notifications about planned maintenance, power outages, and when supply is restored in your area.",
         icon: BellAlertIcon,
     },
     {
-        title: "Multi-Provider",
+        title: "All Nigerian DisCos",
         description:
-            "Access multiple electricity providers across different subdivisions.",
+            "Works with PHCN zones across Nigeria - AEDC, EKEDC, IKEDC, IBEDC, EEDC, and more. Switch providers seamlessly.",
         icon: GlobeAltIcon,
     },
 ];
@@ -104,18 +104,17 @@ const features: Feature[] = [
                 <p
                     class="text-xl sm:text-2xl md:text-3xl font-normal mb-4 text-white/90"
                 >
-                    Redefining electricity management through software
-                    innovation
+                    Managing electricity made easy for every Nigerian home
                 </p>
                 <p
                     class="text-base sm:text-lg md:text-xl text-white/60 mb-12 leading-relaxed max-w-3xl mx-auto"
                 >
-                    Experience the future of power distribution with a fully
-                    digital, intelligent interface
+                    Buy tokens, share units, and monitor your power consumption
+                    from your phone. No more queues, no more scratched cards.
                 </p>
                 <div class="flex gap-4 justify-center flex-wrap">
-                    <button class="btn-primary">Get Started</button>
-                    <button class="btn-secondary">Learn More</button>
+                    <button class="btn-primary">Download App</button>
+                    <button class="btn-secondary">See How It Works</button>
                 </div>
             </div>
         </section>
@@ -126,13 +125,13 @@ const features: Feature[] = [
                 <h2
                     class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight"
                 >
-                    Built for the future
+                    Everything you need
                 </h2>
                 <p
                     class="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed"
                 >
-                    From hardware to software. A seamless transition to modern
-                    electricity management.
+                    Say goodbye to CIU box wahala. Manage your prepaid meter
+                    from anywhere in Nigeria.
                 </p>
             </div>
 
@@ -165,24 +164,24 @@ const features: Feature[] = [
                     <h2
                         class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight"
                     >
-                        Hardware. Reimagined as software.
+                        Your CIU box, now on your phone.
                     </h2>
                     <p
                         class="text-lg sm:text-xl text-white/70 leading-relaxed mb-12"
                     >
-                        The traditional Customer Interface Unit has evolved. No
-                        more physical limitations. No more manual interventions.
-                        Just pure, seamless digital experience.
+                        No more struggling with that old CIU hardware. No more
+                        trekking to buy tokens. Everything you need to manage
+                        your NEPA bill is now in one app.
                     </p>
                     <div class="flex gap-12 flex-wrap">
                         <div>
                             <div class="text-gradient text-5xl font-bold mb-2">
-                                100%
+                                ₦0
                             </div>
                             <div
                                 class="text-sm text-white/50 uppercase tracking-widest"
                             >
-                                Digital
+                                Service Fee
                             </div>
                         </div>
                         <div>
@@ -197,12 +196,12 @@ const features: Feature[] = [
                         </div>
                         <div>
                             <div class="text-gradient text-5xl font-bold mb-2">
-                                Real-time
+                                Instant
                             </div>
                             <div
                                 class="text-sm text-white/50 uppercase tracking-widest"
                             >
-                                Updates
+                                Token Delivery
                             </div>
                         </div>
                     </div>
@@ -240,16 +239,16 @@ const features: Feature[] = [
                 <h2
                     class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight"
                 >
-                    Ready to transform your electricity experience?
+                    Ready to stop wasting time buying tokens?
                 </h2>
                 <p
                     class="text-lg sm:text-xl text-white/70 mb-10 leading-relaxed"
                 >
-                    Join thousands of users who have already made the switch to
-                    smart power management
+                    Join thousands of Nigerians managing their prepaid meters
+                    the smart way
                 </p>
                 <button class="btn-primary text-lg px-12 py-5">
-                    Download Now
+                    Download App
                 </button>
             </div>
         </section>
