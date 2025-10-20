@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import type { Component } from "vue";
+import {
+    BoltIcon,
+    ArrowPathIcon,
+    ChartBarIcon,
+    HomeModernIcon,
+    BellAlertIcon,
+    GlobeAltIcon,
+} from "@heroicons/vue/24/outline";
 
 const showContent = ref(false);
 
@@ -9,42 +18,48 @@ onMounted(() => {
     }, 100);
 });
 
-const features = [
+interface Feature {
+    title: string;
+    description: string;
+    icon: Component;
+}
+
+const features: Feature[] = [
     {
         title: "Digital Tokens",
         description:
             "Seamlessly purchase and manage electricity tokens through an intuitive digital interface.",
-        icon: "⚡",
+        icon: BoltIcon,
     },
     {
         title: "Unit Sharing",
         description:
             "Share electricity units with family and friends across Nigeria instantly.",
-        icon: "🔄",
+        icon: ArrowPathIcon,
     },
     {
         title: "Smart Analytics",
         description:
             "Track your consumption with real-time analytics and intelligent insights.",
-        icon: "📊",
+        icon: ChartBarIcon,
     },
     {
         title: "Appliance Management",
         description:
             "Monitor and control your appliances with precision and ease.",
-        icon: "🏠",
+        icon: HomeModernIcon,
     },
     {
         title: "Live Updates",
         description:
             "Stay informed about maintenance schedules and service updates from your provider.",
-        icon: "🔔",
+        icon: BellAlertIcon,
     },
     {
         title: "Multi-Provider",
         description:
             "Access multiple electricity providers across different subdivisions.",
-        icon: "🌐",
+        icon: GlobeAltIcon,
     },
 ];
 </script>
@@ -128,8 +143,8 @@ const features = [
                     class="glass-card-hover p-10 rounded-3xl animate-fade-in-up"
                     :style="{ animationDelay: `${index * 0.1}s`, opacity: 0 }"
                 >
-                    <div class="text-5xl mb-6 inline-block">
-                        {{ feature.icon }}
+                    <div class="w-16 h-16 mb-6 text-white">
+                        <component :is="feature.icon" class="w-full h-full" />
                     </div>
                     <h3 class="text-2xl font-semibold mb-4 tracking-tight">
                         {{ feature.title }}
