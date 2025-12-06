@@ -1,107 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/ciu-logo-full.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CIU - Customer Interface Unit</title>
-    
+    <title>Digital CIU</title>
+
     <!-- Primary Meta Tags -->
-    <meta name="title" content="CIU - Customer Interface Unit" />
-    <meta name="description" content="Managing electricity made easy for every Nigerian home. Buy tokens, share units, and monitor your power consumption directly from your phone. Works with all Nigerian DisCos." />
-    <meta name="keywords" content="electricity, prepaid meter, Nigeria, DisCo, AEDC, EKEDC, IKEDC, IBEDC, tokens, power, electricity management" />
-    <meta name="author" content="CIU - Customer Interface Unit" />
+    <meta name="title" content="Digital CIU" />
+    <meta
+      name="description"
+      content="Managing electricity made easy for every Nigerian home. Buy tokens, share units, and monitor your power consumption directly from your phone. Works with all Nigerian DisCos."
+    />
+    <meta
+      name="keywords"
+      content="electricity, prepaid meter, Nigeria, DisCo, AEDC, EKEDC, IKEDC, IBEDC, tokens, power, electricity management"
+    />
+    <meta name="author" content="Digital CIU" />
     <meta name="robots" content="index, follow" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ciu.app/" />
-    <meta property="og:title" content="CIU - Customer Interface Unit" />
-    <meta property="og:description" content="Managing electricity made easy for every Nigerian home. Buy tokens, share units, and monitor your power consumption directly from your phone." />
-    <meta property="og:image" content="/ciu-logo-full.svg" />
+    <meta
+      property="og:url"
+      content="https://customer-interface-unit.vercel.app/"
+    />
+    <meta property="og:title" content="Digital CIU" />
+    <meta
+      property="og:description"
+      content="Managing electricity made easy for every Nigerian home. Buy tokens, share units, and monitor your power consumption directly from your phone."
+    />
+    <meta
+      property="og:image"
+      content="https://customer-interface-unit.vercel.app/digitalCIUlogo.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://customer-interface-unit.vercel.app/digitalCIUlogo.png"
+    />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="CIU Logo - Customer Interface Unit" />
-    <meta property="og:site_name" content="CIU" />
+    <meta property="og:image:alt" content="Digital CIU Logo" />
+    <meta property="og:site_name" content="Digital CIU" />
     <meta property="og:locale" content="en_US" />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://ciu.app/" />
-    <meta name="twitter:title" content="CIU - Customer Interface Unit" />
-    <meta name="twitter:description" content="Managing electricity made easy for every Nigerian home. Buy tokens, share units, and monitor your power consumption directly from your phone." />
-    <meta name="twitter:image" content="/ciu-logo-full.svg" />
-    <meta name="twitter:image:alt" content="CIU Logo - Customer Interface Unit" />
-    
+    <meta
+      name="twitter:url"
+      content="https://customer-interface-unit.vercel.app/"
+    />
+    <meta name="twitter:title" content="Digital CIU" />
+    <meta
+      name="twitter:description"
+      content="Managing electricity made easy for every Nigerian home. Buy tokens, share units, and monitor your power consumption directly from your phone."
+    />
+    <meta
+      name="twitter:image"
+      content="https://customer-interface-unit.vercel.app/digitalCIUlogo.png"
+    />
+    <meta name="twitter:image:alt" content="Digital CIU Logo" />
+
     <!-- Additional Meta Tags -->
     <meta name="theme-color" content="#10B981" />
     <meta name="msapplication-TileColor" content="#10B981" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <script>
-    // Configure Tailwind to include our custom 3D transform utilities
-    tailwind.config = {
-    theme: {
-    extend: {
-    colors: {
-    brand: { 500: '#10B981', 600: '#059669' } // Emerald green for energy/power
-    }
-    }
-    },
-    plugins: [
-    function({ addUtilities }) {
-    const rotateXUtilities = {};
-    const rotateYUtilities = {};
-    const rotateZUtilities = {};
-    const rotateValues = [0, 5, 10, 15, 20, 30, 45, 75];
-    // Generate rotate-x utilities
-    rotateValues.forEach((value) => {
-    rotateXUtilities[`.rotate-x-${value}`] = {
-    '--tw-rotate-x': `${value}deg`,
-    transform: `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`.replace(/\s+/g, ' ').trim(),
-    };
-    if (value !== 0) {
-    rotateXUtilities[`.-rotate-x-${value}`] = {
-    '--tw-rotate-x': `-${value}deg`,
-    transform: `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`.replace(/\s+/g, ' ').trim(),
-    };
-    }
-    });
-    // Generate rotate-y utilities
-    rotateValues.forEach((value) => {
-    rotateYUtilities[`.rotate-y-${value}`] = {
-    '--tw-rotate-y': `${value}deg`,
-    transform: `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`.replace(/\s+/g, ' ').trim(),
-    };
-    if (value !== 0) {
-    rotateYUtilities[`.-rotate-y-${value}`] = {
-    '--tw-rotate-y': `-${value}deg`,
-    transform: `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`.replace(/\s+/g, ' ').trim(),
-    };
-    }
-    });
-    // Generate rotate-z utilities
-    rotateValues.forEach((value) => {
-    rotateZUtilities[`.rotate-z-${value}`] = {
-    '--tw-rotate-z': `${value}deg`,
-    transform: `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`.replace(/\s+/g, ' ').trim(),
-    };
-    if (value !== 0) {
-    rotateZUtilities[`.-rotate-z-${value}`] = {
-    '--tw-rotate-z': `-${value}deg`,
-    transform: `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`.replace(/\s+/g, ' ').trim(),
-    };
-    }
-    });
-    const perspectiveUtilities = { ".perspective-none": { perspective: "none" }, ".perspective-dramatic": { perspective: "100px" }, ".perspective-near": { perspective: "300px" }, ".perspective-normal": { perspective: "500px" }, ".perspective-midrange": { perspective: "800px" }, ".perspective-distant": { perspective: "1200px" }, };
-    const transformStyleUtilities = { ".transform-style-preserve-3d": { "transform-style": "preserve-3d" }, ".transform-style-flat": { "transform-style": "flat" }, };
-    addUtilities({...rotateXUtilities,...rotateYUtilities,...rotateZUtilities,...perspectiveUtilities,...transformStyleUtilities, });
-    }
-    ]
-    };
+      // Configure Tailwind to include our custom 3D transform utilities
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { 500: '#10B981', 600: '#059669' }, // Emerald green for energy/power
+            },
+          },
+        },
+        plugins: [
+          function ({ addUtilities }) {
+            const rotateXUtilities = {};
+            const rotateYUtilities = {};
+            const rotateZUtilities = {};
+            const rotateValues = [0, 5, 10, 15, 20, 30, 45, 75];
+            // Generate rotate-x utilities
+            rotateValues.forEach((value) => {
+              rotateXUtilities[`.rotate-x-${value}`] = {
+                '--tw-rotate-x': `${value}deg`,
+                transform:
+                  `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`
+                    .replace(/\s+/g, ' ')
+                    .trim(),
+              };
+              if (value !== 0) {
+                rotateXUtilities[`.-rotate-x-${value}`] = {
+                  '--tw-rotate-x': `-${value}deg`,
+                  transform:
+                    `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`
+                      .replace(/\s+/g, ' ')
+                      .trim(),
+                };
+              }
+            });
+            // Generate rotate-y utilities
+            rotateValues.forEach((value) => {
+              rotateYUtilities[`.rotate-y-${value}`] = {
+                '--tw-rotate-y': `${value}deg`,
+                transform:
+                  `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`
+                    .replace(/\s+/g, ' ')
+                    .trim(),
+              };
+              if (value !== 0) {
+                rotateYUtilities[`.-rotate-y-${value}`] = {
+                  '--tw-rotate-y': `-${value}deg`,
+                  transform:
+                    `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`
+                      .replace(/\s+/g, ' ')
+                      .trim(),
+                };
+              }
+            });
+            // Generate rotate-z utilities
+            rotateValues.forEach((value) => {
+              rotateZUtilities[`.rotate-z-${value}`] = {
+                '--tw-rotate-z': `${value}deg`,
+                transform:
+                  `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`
+                    .replace(/\s+/g, ' ')
+                    .trim(),
+              };
+              if (value !== 0) {
+                rotateZUtilities[`.-rotate-z-${value}`] = {
+                  '--tw-rotate-z': `-${value}deg`,
+                  transform:
+                    `translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0)) rotateX(var(--tw-rotate-x, 0)) rotateY(var(--tw-rotate-y, 0)) rotateZ(var(--tw-rotate-z, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))`
+                      .replace(/\s+/g, ' ')
+                      .trim(),
+                };
+              }
+            });
+            const perspectiveUtilities = {
+              '.perspective-none': { perspective: 'none' },
+              '.perspective-dramatic': { perspective: '100px' },
+              '.perspective-near': { perspective: '300px' },
+              '.perspective-normal': { perspective: '500px' },
+              '.perspective-midrange': { perspective: '800px' },
+              '.perspective-distant': { perspective: '1200px' },
+            };
+            const transformStyleUtilities = {
+              '.transform-style-preserve-3d': {
+                'transform-style': 'preserve-3d',
+              },
+              '.transform-style-flat': { 'transform-style': 'flat' },
+            };
+            addUtilities({
+              ...rotateXUtilities,
+              ...rotateYUtilities,
+              ...rotateZUtilities,
+              ...perspectiveUtilities,
+              ...transformStyleUtilities,
+            });
+          },
+        ],
+      };
     </script>
   </head>
   <body>
