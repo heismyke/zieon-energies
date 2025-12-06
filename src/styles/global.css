@@ -1,6 +1,31 @@
+/* Terminess TTF Nerd Font */
+@font-face {
+    font-family: 'TerminessTTF Nerd Font';
+    src: url('https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Terminus/terminus-ttf-4.40.1/TerminessTTF-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TerminessTTF Nerd Font';
+    src: url('https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Terminus/terminus-ttf-4.40.1/TerminessTTF-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TerminessTTF Nerd Font';
+    src: url('https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Terminus/terminus-ttf-4.40.1/TerminessTTF-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* Custom font classes */
-.font-heading { font-family: 'Space Grotesk', sans-serif; }
-.font-body { font-family: 'Inter', sans-serif; }
+.font-heading { font-family: 'TerminessTTF Nerd Font', monospace; }
+.font-body { font-family: 'TerminessTTF Nerd Font', monospace; }
 
 /* Hide scrollbar */
 ::-webkit-scrollbar { display: none; }
