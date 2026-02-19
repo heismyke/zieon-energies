@@ -7,6 +7,32 @@ const routes: RouteRecordRaw[] = [
     name: "Home",
     component: () => import("../views/HomeView.vue"),
   },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("../views/BlogView.vue"),
+  },
+  {
+    path: "/merchant",
+    name: "Merchant",
+    component: () => import("../views/MerchantView.vue"),
+  },
+  {
+    path: "/developers",
+    name: "Developers",
+    component: () => import("../views/DevelopersView.vue"),
+  },
+  {
+    path: "/faq",
+    name: "Faq",
+    component: () => import("../views/FaqView.vue"),
+  },
+  {
+    path: "/contactus",
+    alias: ["/contact-us"],
+    name: "ContactUs",
+    component: () => import("../views/ContactUsView.vue"),
+  },
 ];
 
 const router = createRouter({

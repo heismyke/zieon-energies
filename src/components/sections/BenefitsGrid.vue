@@ -41,7 +41,7 @@ onMounted(() => {
         <!-- Header & Filter --> 
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6"> 
             <div> 
-                <h2 class="text-2xl font-heading font-medium text-white">Why Choose CIU?</h2> 
+                <h2 class="text-2xl font-heading font-medium text-white">Why Choose Pulselink?</h2> 
                 <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wider">Everything you need in one app</p> 
             </div> 
             <!-- Filter Buttons --> 

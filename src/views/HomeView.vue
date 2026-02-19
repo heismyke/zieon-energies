@@ -7,6 +7,7 @@ import ServicesGrid from '../components/sections/ServicesGrid.vue';
 import WaitlistForm from '../components/sections/WaitlistForm.vue';
 import CarouselSection from '../components/sections/CarouselSection.vue';
 import BenefitsGrid from '../components/sections/BenefitsGrid.vue';
+import LeadershipGrid from '../components/sections/LeadershipGrid.vue';
 import Footer from '../components/layout/Footer.vue';
 
 onMounted(() => {
@@ -35,6 +36,8 @@ onMounted(() => {
         <CarouselSection />
         
         <BenefitsGrid />
+
+        <LeadershipGrid />
         
         <Footer />
     </main>
