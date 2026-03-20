@@ -35,7 +35,7 @@ body { -ms-overflow-style: none; scrollbar-width: none; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideDownReveal { from { transform: translateY(-110%); } to { transform: translateY(0); } }
 @keyframes clipColReveal { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
-@keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 10px rgba(16, 185, 129, 0); } 50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); } }
+@keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 10px rgba(200, 130, 58, 0); } 50% { box-shadow: 0 0 20px rgba(200, 130, 58, 0.25); } }
 
 /* Utility Classes for JS injections */
 .char-wrapper { display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1; position: relative; }
@@ -52,7 +52,6 @@ body { -ms-overflow-style: none; scrollbar-width: none; }
 .card-enter { transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
 
 /* Portfolio Filter Styles */
-.filter-btn.active { background-color: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.2); }
+.filter-btn.active { background-color: rgba(200, 130, 58, 0.2); color: #f7efe7; border-color: rgba(200, 130, 58, 0.5); }
 .portfolio-item { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
 .portfolio-item.hidden-item { display: none; opacity: 0; transform: scale(0.95); }
-

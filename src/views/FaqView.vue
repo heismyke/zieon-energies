@@ -33,7 +33,7 @@ onMounted(() => {
       </div>
       <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
         <h2 class="text-base text-white font-heading">Which DisCos are supported?</h2>
-        <p class="mt-2 text-xs text-neutral-400">Pulselink supports major Nigerian DisCos including AEDC, EKEDC, IKEDC, IBEDC, and more.</p>
+        <p class="mt-2 text-xs text-neutral-400">Zelavra supports major Nigerian DisCos including AEDC, EKEDC, IKEDC, IBEDC, and more.</p>
       </div>
       <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
         <h2 class="text-base text-white font-heading">What if a payment fails?</h2>

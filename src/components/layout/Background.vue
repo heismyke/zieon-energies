@@ -27,8 +27,9 @@ onMounted(() => {
     <!-- Background (component) -->
     <div class="fixed w-full h-screen top-0 -z-10 pointer-events-none">
         <div class="absolute inset-0 bg-gradient-to-b from-brand-900/10 via-[#050505] to-[#050505] opacity-40"></div>
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-500/10 blur-[120px] rounded-full mix-blend-screen"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full mix-blend-screen"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(200,130,58,0.09),rgba(5,5,5,0)_55%),radial-gradient(circle_at_bottom_right,rgba(213,29,127,0.08),rgba(5,5,5,0)_60%)] opacity-20"></div>
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-500/5 blur-[120px] rounded-full mix-blend-screen"></div>
+        <div class="absolute bottom-0 left-0 w-[480px] h-[480px] bg-accent-magenta/5 blur-[140px] rounded-full mix-blend-screen"></div>
     </div>
     
     <!-- Background Column Reveal Animation Container --> 
@@ -36,5 +37,3 @@ onMounted(() => {
         <!-- JS Generated Columns will go here -->
     </div>
 </template>
-
-

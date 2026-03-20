@@ -50,12 +50,13 @@
 
     .btn-primary {
         @apply px-10 py-4 text-base font-medium rounded-full cursor-pointer transition-all duration-300 ease-out;
-        @apply bg-white text-black border-none;
+        @apply bg-brand-500 text-black border-none;
     }
 
     .btn-primary:hover {
         @apply scale-105;
-        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        background: #d59a5b;
+        box-shadow: 0 20px 40px rgba(200, 130, 58, 0.25);
     }
 
     .btn-secondary {

@@ -26,19 +26,19 @@ onMounted(() => {
             <div class="mb-6 animate-fade-in" style="animation-delay: 1.2s; opacity: 0; animation-fill-mode: forwards;"> 
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-500/20 bg-brand-500/5 backdrop-blur-md"> 
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> 
-                    <span class="text-[0.65rem] font-semibold uppercase tracking-widest text-brand-400">Coming Soon</span> 
+                    <span class="text-[0.65rem] font-semibold uppercase tracking-widest text-brand-400">Integrated Platform</span> 
                 </div> 
             </div> 
             
             <!-- Animated H1 --> 
             <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight mix-blend-normal max-w-6xl" id="hero-title"> 
-                <span class="block opacity-90 split-text font-medium"><span class="char-wrapper">M</span><span class="char-wrapper">a</span><span class="char-wrapper">n</span><span class="char-wrapper">a</span><span class="char-wrapper">g</span><span class="char-wrapper">e</span></span> 
-                <span class="block text-neutral-500/50 ml-0 md:ml-1 split-text font-bold"><span class="char-wrapper">P</span><span class="char-wrapper">o</span><span class="char-wrapper">w</span><span class="char-wrapper">e</span><span class="char-wrapper">r</span><span class="char-wrapper">.</span></span> 
-                <span class="block font-light text-white ml-8 md:ml-24 split-text mt-2"><span class="char-wrapper">S</span><span class="char-wrapper">m</span><span class="char-wrapper">a</span><span class="char-wrapper">r</span><span class="char-wrapper">t</span><span class="char-wrapper">e</span><span class="char-wrapper">r</span><span class="char-wrapper">.</span></span> 
+                <span class="block opacity-90 split-text font-medium"><span class="char-wrapper">E</span><span class="char-wrapper">v</span><span class="char-wrapper">e</span><span class="char-wrapper">r</span><span class="char-wrapper">y</span><span class="char-wrapper">t</span><span class="char-wrapper">h</span><span class="char-wrapper">i</span><span class="char-wrapper">n</span><span class="char-wrapper">g</span><span class="char-wrapper"> </span><span class="char-wrapper">E</span><span class="char-wrapper">n</span><span class="char-wrapper">e</span><span class="char-wrapper">r</span><span class="char-wrapper">g</span><span class="char-wrapper">y</span><span class="char-wrapper">.</span></span> 
+                <span class="block text-neutral-500/50 ml-0 md:ml-1 split-text font-bold"><span class="char-wrapper">E</span><span class="char-wrapper">v</span><span class="char-wrapper">e</span><span class="char-wrapper">r</span><span class="char-wrapper">y</span><span class="char-wrapper">t</span><span class="char-wrapper">h</span><span class="char-wrapper">i</span><span class="char-wrapper">n</span><span class="char-wrapper">g</span><span class="char-wrapper"> </span><span class="char-wrapper">P</span><span class="char-wrapper">a</span><span class="char-wrapper">y</span><span class="char-wrapper">m</span><span class="char-wrapper">e</span><span class="char-wrapper">n</span><span class="char-wrapper">t</span><span class="char-wrapper">s</span><span class="char-wrapper">.</span></span> 
+                <span class="block font-light text-white ml-8 md:ml-24 split-text mt-2"><span class="char-wrapper">O</span><span class="char-wrapper">n</span><span class="char-wrapper">e</span><span class="char-wrapper"> </span><span class="char-wrapper">A</span><span class="char-wrapper">p</span><span class="char-wrapper">p</span><span class="char-wrapper">.</span></span> 
             </h1> 
             
             <p class="mt-8 max-w-lg text-sm md:text-base text-neutral-400 leading-relaxed tracking-wide font-light animate-fade-in" style="animation-delay: 1.5s; opacity: 0; animation-fill-mode: forwards;"> 
-                Managing electricity made easy for every Nigerian home. Buy tokens, share units, and monitor your power consumption directly from your phone.
+                Zelavra is a Nigerian energy-tech and fintech company connecting electricity distribution, smart metering, and digital payments into one seamless experience. We don't wait for power. We bring it.
             </p> 
             
             <!-- Partners Ticker --> 
@@ -56,4 +56,3 @@ onMounted(() => {
         </div> 
     </div>
 </template>
-

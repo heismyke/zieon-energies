@@ -9,6 +9,16 @@ export default {
       colors: {
         'glass-white': 'rgba(255, 255, 255, 0.05)',
         'glass-border': 'rgba(255, 255, 255, 0.1)',
+        brand: {
+          900: '#3b2412',
+          700: '#7a4a24',
+          500: '#c8823a',
+          400: '#d59a5b',
+          300: '#e3b680',
+        },
+        accent: {
+          magenta: '#d51d7f',
+        },
       },
       backdropBlur: {
         'glass': '20px',

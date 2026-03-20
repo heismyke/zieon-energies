@@ -41,14 +41,14 @@ onMounted(() => {
         <!-- Header & Filter --> 
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6"> 
             <div> 
-                <h2 class="text-2xl font-heading font-medium text-white">Why Choose Pulselink?</h2> 
+                <h2 class="text-2xl font-heading font-medium text-white">Why Choose Zelavra?</h2> 
                 <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wider">Everything you need in one app</p> 
             </div> 
             <!-- Filter Buttons --> 
             <div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide"> 
-                <button class="filter-btn active px-4 py-1.5 rounded-full border border-white/10 text-[0.65rem] uppercase tracking-widest font-semibold text-neutral-400 hover:text-white hover:border-white/20 transition-all" data-filter="all">All Benefits</button> 
-                <button class="filter-btn px-4 py-1.5 rounded-full border border-white/5 text-[0.65rem] uppercase tracking-widest font-semibold text-neutral-500 hover:text-white hover:border-white/20 transition-all" data-filter="payment">Payments</button> 
-                <button class="filter-btn px-4 py-1.5 rounded-full border border-white/5 text-[0.65rem] uppercase tracking-widest font-semibold text-neutral-500 hover:text-white hover:border-white/20 transition-all" data-filter="service">Service</button> 
+                <button class="filter-btn active px-4 py-1.5 rounded-full border border-brand-500/30 text-[0.65rem] uppercase tracking-widest font-semibold text-brand-300 hover:text-white hover:border-brand-500/60 transition-all" data-filter="all">All Benefits</button> 
+                <button class="filter-btn px-4 py-1.5 rounded-full border border-brand-500/20 text-[0.65rem] uppercase tracking-widest font-semibold text-brand-400/80 hover:text-white hover:border-brand-500/60 transition-all" data-filter="payment">Payments</button> 
+                <button class="filter-btn px-4 py-1.5 rounded-full border border-brand-500/20 text-[0.65rem] uppercase tracking-widest font-semibold text-brand-400/80 hover:text-white hover:border-brand-500/60 transition-all" data-filter="service">Service</button> 
             </div> 
         </div> 
         
@@ -117,4 +117,3 @@ onMounted(() => {
         </div> 
     </div>
 </template>
-

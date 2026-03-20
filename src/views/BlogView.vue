@@ -20,7 +20,7 @@ onMounted(() => {
 
     <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-[#101010] overflow-hidden">
       <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-      <p class="relative text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Pulselink Blog</p>
+      <p class="relative text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Zelavra Blog</p>
       <h1 class="relative text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Stories From The Grid</h1>
       <p class="relative mt-4 max-w-2xl text-sm text-neutral-400">
         Product updates, electricity tips, and operating guides for households, landlords, and teams.
@@ -36,7 +36,7 @@ onMounted(() => {
       <article class="group bg-[#161616] border border-white/5 hover:border-brand-500/30 rounded-xl p-6 transition-all duration-500">
         <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-3">Release</p>
         <h2 class="text-lg text-white font-heading mb-2">Bulk Meter Dashboard Is Live</h2>
-        <p class="text-xs text-neutral-400 leading-relaxed">Track multiple homes and properties from one Pulselink account.</p>
+        <p class="text-xs text-neutral-400 leading-relaxed">Track multiple homes and properties from one Zelavra account.</p>
       </article>
       <article class="group bg-[#161616] border border-white/5 hover:border-brand-500/30 rounded-xl p-6 transition-all duration-500">
         <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-3">Policy</p>

@@ -20,7 +20,7 @@ onMounted(() => {
 
     <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-[#101010]">
       <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Developers</p>
-      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Build On Pulselink APIs</h1>
+      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Build On Zelavra APIs</h1>
       <p class="mt-4 max-w-2xl text-sm text-neutral-400">
         Integrate token purchase, meter validation, and transaction webhooks directly into your apps.
       </p>
@@ -38,7 +38,7 @@ onMounted(() => {
       </div>
       <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
         <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-4">Quickstart</p>
-        <pre class="text-xs text-neutral-300 overflow-x-auto"><code>curl -X POST https://api.pulselink.com/v1/meters/validate \
+        <pre class="text-xs text-neutral-300 overflow-x-auto"><code>curl -X POST https://api.zelavra.com/v1/meters/validate \
 -H "Authorization: Bearer pk_live_xxx" \
 -H "Content-Type: application/json" \
 -d '{"meter_number":"12345678901","disco":"IKEDC"}'</code></pre>

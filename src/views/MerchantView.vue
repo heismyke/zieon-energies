@@ -22,7 +22,7 @@ onMounted(() => {
       <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Merchant</p>
       <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Accept Power Payments At Scale</h1>
       <p class="mt-4 max-w-2xl text-sm text-neutral-400">
-        Pulselink Merchant helps vendors, agents, and utility service points issue tokens with fast settlement and clear audit trails.
+        Zelavra Merchant helps vendors, agents, and utility service points issue tokens with fast settlement and clear audit trails.
       </p>
     </section>
 

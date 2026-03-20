@@ -93,10 +93,10 @@ onUnmounted(() => {
                 <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wider">Control your home remotely</p> 
             </div> 
             <div class="flex gap-2"> 
-                <button id="prevBtn" class="p-3 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all text-white/50"> 
+                <button id="prevBtn" class="p-3 rounded-full border border-white/10 hover:bg-brand-500 hover:text-black hover:border-brand-500/40 transition-all text-white/60"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"></path></svg> 
                 </button> 
-                <button id="nextBtn" class="p-3 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all text-white/50"> 
+                <button id="nextBtn" class="p-3 rounded-full border border-white/10 hover:bg-brand-500 hover:text-black hover:border-brand-500/40 transition-all text-white/60"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m9 18 6-6-6-6"></path></svg> 
                 </button> 
             </div> 
@@ -146,4 +146,3 @@ onUnmounted(() => {
         </div> 
     </div>
 </template>
-

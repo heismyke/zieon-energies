@@ -8,19 +8,19 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../views/HomeView.vue"),
   },
   {
-    path: "/blog",
-    name: "Blog",
-    component: () => import("../views/BlogView.vue"),
+    path: "/services",
+    name: "Services",
+    component: () => import("../views/ServicesView.vue"),
   },
   {
-    path: "/merchant",
-    name: "Merchant",
-    component: () => import("../views/MerchantView.vue"),
+    path: "/platform",
+    name: "Platform",
+    component: () => import("../views/PlatformView.vue"),
   },
   {
-    path: "/developers",
-    name: "Developers",
-    component: () => import("../views/DevelopersView.vue"),
+    path: "/company",
+    name: "Company",
+    component: () => import("../views/CompanyView.vue"),
   },
   {
     path: "/faq",

@@ -20,7 +20,7 @@ onMounted(() => {
 
     <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-gradient-to-b from-[#131313] to-[#0D0D0D]">
       <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Contact Us</p>
-      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Talk To The Pulselink Team</h1>
+      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Talk To The Zelavra Team</h1>
       <p class="mt-4 max-w-2xl text-sm text-neutral-400">
         Reach support, partnerships, or technical operations.
       </p>
@@ -29,7 +29,7 @@ onMounted(() => {
     <section class="z-20 relative grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
       <div class="bg-[#161616] border border-white/5 rounded-xl p-6 space-y-3">
         <p class="text-[0.6rem] uppercase tracking-widest text-neutral-500">Channels</p>
-        <p class="text-sm text-white">support@pulselink.com</p>
+        <p class="text-sm text-white">support@zelavra.com</p>
         <p class="text-sm text-white">+234 800 000 0000</p>
         <p class="text-sm text-white">Lagos, Nigeria</p>
       </div>
@@ -37,7 +37,7 @@ onMounted(() => {
         <input type="text" placeholder="Name" class="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-3 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-brand-500/50" />
         <input type="email" placeholder="Email" class="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-3 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-brand-500/50" />
         <textarea placeholder="Message" rows="5" class="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-3 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-brand-500/50"></textarea>
-        <button type="button" class="mt-2 bg-white text-black text-xs font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-brand-400 transition-colors">
+        <button type="button" class="mt-2 bg-brand-500 text-black text-xs font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-brand-400 transition-colors shadow-[0_12px_28px_rgba(200,130,58,0.22)]">
           Send Message
         </button>
       </form>

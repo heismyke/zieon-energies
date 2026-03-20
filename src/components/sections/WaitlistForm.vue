@@ -4,9 +4,9 @@
     <!-- Right: Interactive Form --> 
     <div class="lg:col-span-5 bg-gradient-to-b from-[#131313] to-[#0F0F0F] border border-white/10 rounded-xl p-8 flex flex-col relative overflow-hidden group"> 
         <div class="relative z-10 h-full flex flex-col"> 
-            <span class="text-[0.6rem] font-semibold text-brand-500 uppercase tracking-[0.2em] mb-4 block">Waitlist</span> 
-            <h3 class="text-2xl font-heading text-white mb-2 tracking-tight">Get Early Access.</h3> 
-            <p class="text-xs text-neutral-500 mb-8">Join thousands managing their prepaid meters the smart way.</p> 
+            <span class="text-[0.6rem] font-semibold text-brand-500 uppercase tracking-[0.2em] mb-4 block">Get The App</span> 
+            <h3 class="text-2xl font-heading text-white mb-2 tracking-tight">Start With Zelavra.</h3> 
+            <p class="text-xs text-neutral-500 mb-8">Create your account to buy power, share units, and manage payments.</p> 
             <form class="flex flex-col gap-4 flex-grow justify-center"> 
                 <div class="flex flex-col gap-3"> 
                     <div class="relative group/input"> 
@@ -43,13 +43,11 @@
                         </label> 
                     </div> 
                 </div> 
-                <button type="button" class="mt-4 w-full bg-white text-black text-xs font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-brand-400 transition-colors flex items-center justify-center gap-2 group-hover:gap-3 transition-all"> 
-                    Join Waitlist 
+                <button type="button" class="mt-4 w-full bg-brand-500 text-black text-xs font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-brand-400 transition-colors flex items-center justify-center gap-2 group-hover:gap-3 transition-all shadow-[0_12px_28px_rgba(200,130,58,0.22)]"> 
+                    Create Account 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg> 
                 </button> 
             </form> 
         </div> 
     </div>
 </template>
-
-
