@@ -60,7 +60,7 @@ const faqs = [
     <Background />
     <Navigation />
 
-    <main class="relative z-10 w-full flex flex-col items-center pt-20 md:pt-32 px-4 md:px-6">
+    <main class="relative z-10 w-full flex flex-col items-center pt-28 md:pt-32 px-4 md:px-6">
       <!-- Hero -->
       <section
         id="home"
