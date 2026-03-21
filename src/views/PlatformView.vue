@@ -70,15 +70,23 @@ const faqs = [
 
             <!-- Video Section -->
             <section class="w-full max-w-7xl mb-48 px-6">
-                
-                <!-- Video Container (Empty for now) -->
+                <!-- Video Container -->
                 <div class="relative w-full aspect-video rounded-[2rem] md:rounded-[3rem] bg-[#0A0A0A] border border-white/5 overflow-hidden shadow-2xl group cursor-pointer flex items-center justify-center">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-transparent to-accent-magenta/5 opacity-50"></div>
-                    <!-- Placeholder Play Button -->
-                    <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="m7 3 14 9-14 9z"/></svg>
+                    <!-- Placeholder Image with Half-crop and Shadow -->
+                    <div class="absolute inset-0 z-0">
+                        <img src="/home1.png" class="w-full h-[200%] object-cover object-top opacity-40 grayscale-[20%] group-hover:scale-105 transition-transform duration-[3s]" alt="App Preview Placeholder">
+                        <!-- Dark Shadow Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-100"></div>
+                        <div class="absolute inset-0 bg-[#050505]/60"></div>
                     </div>
-                    <span class="absolute bottom-8 text-neutral-600 text-[0.65rem] uppercase tracking-[0.3em]">App Preview Video coming soon</span>
+
+                    <div class="relative z-10 flex flex-col items-center gap-4">
+                        <!-- Placeholder Play Button -->
+                        <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="m7 3 14 9-14 9z"/></svg>
+                        </div>
+                        <span class="text-neutral-400 text-[0.65rem] uppercase tracking-[0.3em]">App Preview Video coming soon</span>
+                    </div>
                 </div>
             </section>
 
