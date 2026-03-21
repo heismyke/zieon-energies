@@ -3,16 +3,15 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-    <!-- Footer Strip --> 
-    <div class="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-end gap-6 opacity-60 hover:opacity-100 transition-opacity duration-300 z-20"> 
-        <div class="flex flex-col gap-1"> 
-        <span class="text-sm font-semibold text-white font-heading">Zelavra</span> 
-            <p class="text-[0.65rem] uppercase tracking-widest text-neutral-500">Lagos • Abuja • Port Harcourt</p> 
-        </div> 
-        <div class="flex gap-6 text-[0.6rem] uppercase tracking-widest text-neutral-500"> 
-            <a href="#" class="hover:text-white">Privacy</a> 
-            <a href="#" class="hover:text-white">Terms</a> 
-            <RouterLink to="/contactus" class="hover:text-white">Contact</RouterLink> 
-        </div> 
-    </div>
+    <footer class="w-full py-12 flex flex-col items-center gap-8 opacity-40 hover:opacity-100 transition-opacity duration-500">
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[0.7rem] font-medium tracking-wide text-white">
+            <span>Zelavra © 2026</span>
+            <RouterLink to="/grid" class="hover:text-neutral-400">The Grid</RouterLink>
+            <RouterLink to="/platform" class="hover:text-neutral-400">The App</RouterLink>
+            <RouterLink to="/manufacturing" class="hover:text-neutral-400">Manufacturing</RouterLink>
+            <RouterLink to="/store" class="hover:text-neutral-400">Store</RouterLink>
+            <RouterLink to="/contactus" class="hover:text-neutral-400">Contact</RouterLink>
+            <RouterLink to="/faq" class="hover:text-neutral-400">FAQ</RouterLink>
+        </div>
+    </footer>
 </template>

@@ -3,57 +3,49 @@ import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
 const isMobileMenuOpen = ref(false);
-const closeMobileMenu = () => {
-  isMobileMenuOpen.value = false;
-};
 </script>
 
 <template>
     <!-- Navigation Bar --> 
-    <nav class="relative z-20 flex flex-wrap items-center justify-between gap-4 mb-10 animate-fade-in"> 
-        <div class="flex items-center gap-4 group cursor-pointer"> 
-            <div class="w-8 h-8 bg-brand-500 rounded flex items-center justify-center border border-white/10 shadow-[0_0_15px_rgba(200,130,58,0.35)]"> 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-black"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> 
-            </div> 
-            <div class="flex flex-col"> 
-                <RouterLink to="/" class="text-base font-bold text-white tracking-tight font-heading leading-none">Zelavra</RouterLink>
-            </div> 
-        </div> 
-        <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-[0.15em] uppercase text-neutral-400"> 
-            <RouterLink to="/services" class="hover:text-white transition-colors duration-300">Services</RouterLink> 
-            <RouterLink to="/platform" class="hover:text-white transition-colors duration-300">Platform</RouterLink> 
-            <RouterLink to="/company" class="hover:text-white transition-colors duration-300">Company</RouterLink> 
-            <RouterLink to="/faq" class="hover:text-white transition-colors duration-300">FAQ</RouterLink> 
-            <RouterLink to="/contactus" class="hover:text-white transition-colors duration-300">Contact Us</RouterLink> 
-        </div> 
-        <div class="flex gap-2 items-center"> 
-            <button
-                class="md:hidden group relative px-3 py-2 rounded-full bg-brand-500/15 hover:bg-brand-500/25 border border-brand-500/30 transition-all duration-300 backdrop-blur-sm overflow-hidden"
-                type="button"
-                @click="isMobileMenuOpen = !isMobileMenuOpen"
-                :aria-expanded="isMobileMenuOpen"
-                aria-label="Toggle navigation menu"
-            >
-                <svg v-if="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-300"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
-                <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-300"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-            </button>
-            <button class="group relative px-5 py-2 rounded-full bg-brand-500 hover:bg-brand-400 border border-brand-500/40 transition-all duration-300 backdrop-blur-sm overflow-hidden shadow-[0_12px_30px_rgba(200,130,58,0.25)]"> 
-                <span class="relative z-10 text-xs font-medium tracking-widest uppercase text-black flex items-center gap-2"> 
-                    Download App 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg> 
-                </span> 
-            </button> 
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 md:px-12 transition-all duration-300"> 
+        <!-- Logo -->
+        <RouterLink to="/" class="flex items-center z-50 group"> 
+            <span class="text-lg font-bold text-white tracking-tight group-hover:text-neutral-400 transition-colors">Zelavra</span>
+        </RouterLink> 
+
+        <!-- Centered Links (Desktop) -->
+        <div class="hidden lg:flex items-center gap-6 absolute left-1/2 -translate-x-1/2"> 
+            <RouterLink to="/grid" class="text-sm font-medium text-white/90 hover:bg-white/10 px-4 py-2 rounded-md transition-all duration-300">Grid</RouterLink> 
+            <RouterLink to="/platform" class="text-sm font-medium text-white/90 hover:bg-white/10 px-4 py-2 rounded-md transition-all duration-300">App</RouterLink> 
+            <RouterLink to="/manufacturing" class="text-sm font-medium text-white/90 hover:bg-white/10 px-4 py-2 rounded-md transition-all duration-300">Manufacturing</RouterLink> 
+            <RouterLink to="/store" class="text-sm font-medium text-white/90 hover:bg-white/10 px-4 py-2 rounded-md transition-all duration-300">Store</RouterLink> 
         </div> 
 
+        <!-- Right Side (Desktop) -->
+        <div class="hidden md:flex gap-4 items-center z-50"> 
+            <RouterLink to="/contactus" class="text-sm font-medium text-white/90 hover:bg-white/10 px-4 py-2 rounded-md transition-all duration-300">Support</RouterLink> 
+        </div> 
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="lg:hidden z-50 p-3 bg-white/5 backdrop-blur-md rounded-full text-white transition-all hover:bg-white/10"
+            type="button"
+            @click="isMobileMenuOpen = !isMobileMenuOpen"
+        >
+            <svg v-if="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <!-- Mobile Overlay -->
         <div
             v-if="isMobileMenuOpen"
-            class="md:hidden w-full border border-white/10 rounded-xl bg-[#151515]/95 backdrop-blur-sm p-4 flex flex-col gap-3 text-xs font-medium tracking-[0.15em] uppercase text-neutral-300"
+            class="fixed inset-0 bg-black z-40 flex flex-col pt-32 px-10 gap-8 animate-fade-in"
         >
-            <RouterLink to="/services" class="hover:text-white transition-colors duration-300" @click="closeMobileMenu">Services</RouterLink>
-            <RouterLink to="/platform" class="hover:text-white transition-colors duration-300" @click="closeMobileMenu">Platform</RouterLink>
-            <RouterLink to="/company" class="hover:text-white transition-colors duration-300" @click="closeMobileMenu">Company</RouterLink>
-            <RouterLink to="/faq" class="hover:text-white transition-colors duration-300" @click="closeMobileMenu">FAQ</RouterLink>
-            <RouterLink to="/contactus" class="hover:text-white transition-colors duration-300" @click="closeMobileMenu">Contact Us</RouterLink>
+            <RouterLink to="/grid" class="text-2xl font-medium text-white border-b border-white/5 pb-4" @click="isMobileMenuOpen = false">Grid</RouterLink>
+            <RouterLink to="/platform" class="text-2xl font-medium text-white border-b border-white/5 pb-4" @click="isMobileMenuOpen = false">App</RouterLink>
+            <RouterLink to="/manufacturing" class="text-2xl font-medium text-white border-b border-white/5 pb-4" @click="isMobileMenuOpen = false">Manufacturing</RouterLink>
+            <RouterLink to="/store" class="text-2xl font-medium text-white border-b border-white/5 pb-4" @click="isMobileMenuOpen = false">Store</RouterLink>
+            <RouterLink to="/contactus" class="text-2xl font-medium text-white border-b border-white/5 pb-4" @click="isMobileMenuOpen = false">Support</RouterLink>
         </div>
     </nav>
 </template>

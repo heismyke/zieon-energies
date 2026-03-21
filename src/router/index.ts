@@ -8,9 +8,9 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../views/HomeView.vue"),
   },
   {
-    path: "/services",
-    name: "Services",
-    component: () => import("../views/ServicesView.vue"),
+    path: "/grid",
+    name: "Grid",
+    component: () => import("../views/GridView.vue"),
   },
   {
     path: "/platform",
@@ -18,9 +18,14 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../views/PlatformView.vue"),
   },
   {
-    path: "/company",
-    name: "Company",
-    component: () => import("../views/CompanyView.vue"),
+    path: "/manufacturing",
+    name: "Manufacturing",
+    component: () => import("../views/ManufacturingView.vue"),
+  },
+  {
+    path: "/store",
+    name: "Store",
+    component: () => import("../views/StoreView.vue"),
   },
   {
     path: "/faq",

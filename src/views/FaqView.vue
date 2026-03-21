@@ -1,46 +1,57 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import Background from "../components/layout/Background.vue";
-import Navigation from "../components/layout/Navigation.vue";
-import Footer from "../components/layout/Footer.vue";
+import Background from '../components/layout/Background.vue';
+import Navigation from '../components/layout/Navigation.vue';
+import Footer from '../components/layout/Footer.vue';
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  if (typeof window !== "undefined" && (window as any).lucide) {
-    (window as any).lucide.createIcons();
-  }
+    window.scrollTo(0, 0);
 });
 </script>
 
 <template>
-  <Background />
-  <main
-    class="xl:rounded-[2rem] xl:p-10 overflow-hidden flex flex-col xl:max-w-[90rem] xl:shadow-2xl z-10 bg-[#0F0F0F] w-full border-white/5 border rounded-none pt-6 pr-6 pb-6 pl-6 relative shadow-none"
-  >
-    <Navigation />
+    <div class="relative min-h-screen bg-[#050505] font-sans selection:bg-brand-500/30">
+        <Background />
+        <Navigation />
 
-    <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-[#101010]">
-      <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">FAQ</p>
-      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Frequently Asked Questions</h1>
-      <p class="mt-4 max-w-2xl text-sm text-neutral-400">
-        Common answers about token vending, failed transactions, and meter support.
-      </p>
-    </section>
+        <main class="relative z-10 w-full flex flex-col items-center pt-32 px-6">
+            <!-- Hero -->
+            <section class="w-full max-w-[90rem] mb-32 flex flex-col items-center text-center">
+                <span class="text-[0.6rem] font-bold uppercase tracking-[0.5em] text-brand-500 mb-8">Support</span>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-semibold text-white tracking-tighter leading-none mb-12">
+                    Questions.
+                </h1>
+                <p class="text-xl text-neutral-400 max-w-2xl font-light leading-relaxed">
+                    Common answers about our energy hardware, digital infrastructure, and grid integration.
+                </p>
+            </section>
 
-    <section class="z-20 relative space-y-4 mb-6">
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <h2 class="text-base text-white font-heading">How fast are tokens delivered?</h2>
-        <p class="mt-2 text-xs text-neutral-400">Most token purchases are delivered in a few seconds after successful payment.</p>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <h2 class="text-base text-white font-heading">Which DisCos are supported?</h2>
-        <p class="mt-2 text-xs text-neutral-400">Zelavra supports major Nigerian DisCos including AEDC, EKEDC, IKEDC, IBEDC, and more.</p>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <h2 class="text-base text-white font-heading">What if a payment fails?</h2>
-        <p class="mt-2 text-xs text-neutral-400">Failed payments are auto-reconciled. If needed, support can trace and resolve using transaction ID.</p>
-      </div>
-    </section>
+            <!-- FAQ Grid -->
+            <section class="w-full max-w-4xl mb-32 flex flex-col gap-12">
+                <div class="flex flex-col gap-4 border-b border-white/5 pb-8">
+                    <h3 class="text-2xl font-medium text-white">How fast is delivery?</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed">Tokens are delivered in seconds. Hardware delivery depends on your location but typically takes 3-7 business days for installation.</p>
+                </div>
 
-    <Footer />
-  </main>
+                <div class="flex flex-col gap-4 border-b border-white/5 pb-8">
+                    <h3 class="text-2xl font-medium text-white">What is a VPP?</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed">A Virtual Power Plant (VPP) is a network of decentralized energy resources, like home batteries and solar panels, that work together as a single power plant to stabilize the grid.</p>
+                </div>
+
+                <div class="flex flex-col gap-4 border-b border-white/5 pb-8">
+                    <h3 class="text-2xl font-medium text-white">Is there a warranty?</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed">Yes. Our solar panels come with a 25-year performance warranty, and our battery storage units have a 10-year comprehensive warranty.</p>
+                </div>
+
+                <div class="flex flex-col gap-4 border-b border-white/5 pb-8">
+                    <h3 class="text-2xl font-medium text-white">Can I scale my system?</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed">Absolutely. Our systems are modular. You can start with a single battery and add more as your storage needs grow.</p>
+                </div>
+            </section>
+
+             <div class="w-full max-w-[90rem] py-12">
+                <Footer />
+            </div>
+        </main>
+    </div>
 </template>

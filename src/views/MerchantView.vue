@@ -1,49 +1,66 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import Background from "../components/layout/Background.vue";
-import Navigation from "../components/layout/Navigation.vue";
-import Footer from "../components/layout/Footer.vue";
+import Background from '../components/layout/Background.vue';
+import Navigation from '../components/layout/Navigation.vue';
+import Footer from '../components/layout/Footer.vue';
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  if (typeof window !== "undefined" && (window as any).lucide) {
-    (window as any).lucide.createIcons();
-  }
+    window.scrollTo(0, 0);
 });
 </script>
 
 <template>
-  <Background />
-  <main
-    class="xl:rounded-[2rem] xl:p-10 overflow-hidden flex flex-col xl:max-w-[90rem] xl:shadow-2xl z-10 bg-[#0F0F0F] w-full border-white/5 border rounded-none pt-6 pr-6 pb-6 pl-6 relative shadow-none"
-  >
-    <Navigation />
+    <div class="relative min-h-screen bg-[#050505] font-sans selection:bg-brand-500/30">
+        <Background />
+        <Navigation />
 
-    <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-gradient-to-b from-[#131313] to-[#0D0D0D]">
-      <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Merchant</p>
-      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Accept Power Payments At Scale</h1>
-      <p class="mt-4 max-w-2xl text-sm text-neutral-400">
-        Zelavra Merchant helps vendors, agents, and utility service points issue tokens with fast settlement and clear audit trails.
-      </p>
-    </section>
+        <main class="relative z-10 w-full flex flex-col items-center pt-32 px-6">
+            <!-- Hero -->
+            <section class="w-full max-w-[90rem] mb-32 flex flex-col items-center text-center">
+                <span class="text-[0.6rem] font-bold uppercase tracking-[0.5em] text-brand-500 mb-8">Merchants</span>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-semibold text-white tracking-tighter leading-none mb-12">
+                    Scale.
+                </h1>
+                <p class="text-xl text-neutral-400 max-w-2xl font-light leading-relaxed">
+                    A comprehensive merchant portal for high-volume energy vending and hardware distribution.
+                </p>
+            </section>
 
-    <section class="z-20 relative grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-neutral-500">Settlement</p>
-        <p class="mt-2 text-2xl text-white font-heading">T+0</p>
-        <p class="text-xs text-neutral-400 mt-2">Same-day merchant settlement windows.</p>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-neutral-500">Uptime</p>
-        <p class="mt-2 text-2xl text-white font-heading">99.9%</p>
-        <p class="text-xs text-neutral-400 mt-2">Built for high-volume token vending.</p>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-neutral-500">Support</p>
-        <p class="mt-2 text-2xl text-white font-heading">24/7</p>
-        <p class="text-xs text-neutral-400 mt-2">Dedicated operations support channels.</p>
-      </div>
-    </section>
+            <!-- Stats -->
+            <section class="w-full max-w-[90rem] mb-32 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-12 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 flex flex-col items-center text-center gap-4 group hover:bg-white/5 transition-all">
+                    <span class="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-neutral-500 group-hover:text-brand-500 transition-colors">Settlement</span>
+                    <h3 class="text-6xl font-bold text-white tracking-tighter">T+0</h3>
+                    <p class="text-neutral-500 font-light max-w-[12rem]">Same-day merchant settlement windows for improved cashflow.</p>
+                </div>
+                <div class="p-12 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 flex flex-col items-center text-center gap-4 group hover:bg-white/5 transition-all">
+                    <span class="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-neutral-500 group-hover:text-brand-500 transition-colors">Vending Uptime</span>
+                    <h3 class="text-6xl font-bold text-white tracking-tighter">99.9%</h3>
+                    <p class="text-neutral-400 font-light max-w-[12rem]">Engineered for high-volume transactions without interruption.</p>
+                </div>
+                <div class="p-12 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 flex flex-col items-center text-center gap-4 group hover:bg-white/5 transition-all">
+                    <span class="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-neutral-500 group-hover:text-brand-500 transition-colors">Dedicated Support</span>
+                    <h3 class="text-6xl font-bold text-white tracking-tighter">24/7</h3>
+                    <p class="text-neutral-400 font-light max-w-[12rem]">Priority access to our technical and operational support teams.</p>
+                </div>
+            </section>
 
-    <Footer />
-  </main>
+            <!-- CTA -->
+            <section class="w-full max-w-[90rem] px-6 py-40 text-center bg-[#0A0A0A] border-y border-white/5">
+                <h2 class="text-4xl md:text-7xl font-medium text-white tracking-tighter mb-12">Become a Partner.</h2>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <button class="px-12 py-5 bg-white text-black text-sm font-bold uppercase tracking-widest rounded-full hover:bg-neutral-200 transition-colors">
+                        Register Now
+                    </button>
+                    <button class="px-12 py-5 border border-white/10 text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors backdrop-blur-md">
+                        Talk to Sales
+                    </button>
+                </div>
+            </section>
+
+             <div class="w-full max-w-[90rem] py-12">
+                <Footer />
+            </div>
+        </main>
+    </div>
 </template>

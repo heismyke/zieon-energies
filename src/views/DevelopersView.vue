@@ -1,50 +1,76 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import Background from "../components/layout/Background.vue";
-import Navigation from "../components/layout/Navigation.vue";
-import Footer from "../components/layout/Footer.vue";
+import Background from '../components/layout/Background.vue';
+import Navigation from '../components/layout/Navigation.vue';
+import Footer from '../components/layout/Footer.vue';
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  if (typeof window !== "undefined" && (window as any).lucide) {
-    (window as any).lucide.createIcons();
-  }
+    window.scrollTo(0, 0);
 });
 </script>
 
 <template>
-  <Background />
-  <main
-    class="xl:rounded-[2rem] xl:p-10 overflow-hidden flex flex-col xl:max-w-[90rem] xl:shadow-2xl z-10 bg-[#0F0F0F] w-full border-white/5 border rounded-none pt-6 pr-6 pb-6 pl-6 relative shadow-none"
-  >
-    <Navigation />
+    <div class="relative min-h-screen bg-[#050505] font-sans selection:bg-brand-500/30">
+        <Background />
+        <Navigation />
 
-    <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-[#101010]">
-      <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Developers</p>
-      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Build On Zelavra APIs</h1>
-      <p class="mt-4 max-w-2xl text-sm text-neutral-400">
-        Integrate token purchase, meter validation, and transaction webhooks directly into your apps.
-      </p>
-    </section>
+        <main class="relative z-10 w-full flex flex-col items-center pt-32 px-6">
+            <!-- Hero -->
+            <section class="w-full max-w-[90rem] mb-32 flex flex-col items-center text-center">
+                <span class="text-[0.6rem] font-bold uppercase tracking-[0.5em] text-brand-500 mb-8">Developers</span>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-semibold text-white tracking-tighter leading-none mb-12">
+                    Build.
+                </h1>
+                <p class="text-xl text-neutral-400 max-w-2xl font-light leading-relaxed">
+                    Integrate our energy and payment infrastructure directly into your applications.
+                </p>
+            </section>
 
-    <section class="z-20 relative grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-4">Endpoints</p>
-        <ul class="space-y-2 text-xs text-neutral-300">
-          <li><code>POST /v1/meters/validate</code></li>
-          <li><code>POST /v1/tokens/purchase</code></li>
-          <li><code>GET /v1/transactions/:id</code></li>
-          <li><code>POST /v1/webhooks/events</code></li>
-        </ul>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-4">Quickstart</p>
-        <pre class="text-xs text-neutral-300 overflow-x-auto"><code>curl -X POST https://api.zelavra.com/v1/meters/validate \
--H "Authorization: Bearer pk_live_xxx" \
--H "Content-Type: application/json" \
--d '{"meter_number":"12345678901","disco":"IKEDC"}'</code></pre>
-      </div>
-    </section>
+            <!-- API Showcase -->
+            <section class="w-full max-w-6xl mb-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div class="flex flex-col gap-10">
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-3xl font-medium text-white tracking-tight">Powerful APIs.</h3>
+                        <p class="text-neutral-400 font-light leading-relaxed">
+                            Our RESTful APIs allow you to validate meters, purchase tokens, and monitor consumption programmatically. Build custom dashboards for your commercial clients or integrate energy management into your smart home apps.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-2 h-2 rounded-full bg-brand-500"></div>
+                            <span class="text-sm font-bold uppercase tracking-widest">Real-time Webhooks</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-2 h-2 rounded-full bg-brand-500"></div>
+                            <span class="text-sm font-bold uppercase tracking-widest">Sandbox Environment</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-2 h-2 rounded-full bg-brand-500"></div>
+                            <span class="text-sm font-bold uppercase tracking-widest">SDKs in 4+ Languages</span>
+                        </div>
+                    </div>
+                </div>
 
-    <Footer />
-  </main>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md overflow-hidden shadow-2xl">
+                    <div class="flex gap-2 mb-6">
+                        <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                        <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                        <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                    </div>
+                    <pre class="text-xs text-neutral-300 font-mono overflow-x-auto"><code><span class="text-brand-300">curl</span> -X POST https://api.zelavra.com/v1/meters/validate \
+-H <span class="text-neutral-500">"Authorization: Bearer pk_live_xxx"</span> \
+-H <span class="text-neutral-500">"Content-Type: application/json"</span> \
+-d '{
+  <span class="text-brand-300">"meter_number"</span>: <span class="text-neutral-500">"12345678901"</span>,
+  <span class="text-brand-300">"disco"</span>: <span class="text-neutral-500">"IKEDC"</span>
+}'</code></pre>
+                </div>
+            </section>
+
+             <div class="w-full max-w-[90rem] py-12">
+                <Footer />
+            </div>
+        </main>
+    </div>
 </template>

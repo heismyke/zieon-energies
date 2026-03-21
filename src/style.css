@@ -8,8 +8,8 @@
     }
 
     body {
-        @apply bg-black text-white;
-        font-family: 'TerminessTTF Nerd Font', monospace;
+        @apply bg-[#050505] text-white;
+        font-family: 'Inter', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -25,50 +25,8 @@
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
-
-    .glass-card-hover {
-        @apply glass-card transition-all duration-500 ease-out;
-    }
-
-    .glass-card-hover:hover {
-        background: rgba(255, 255, 255, 0.05);
-        border-color: rgba(255, 255, 255, 0.2);
-        transform: translateY(-8px);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .text-gradient {
-        background: linear-gradient(
-            to bottom,
-            #fff 60%,
-            rgba(255, 255, 255, 0.5)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .btn-primary {
-        @apply px-10 py-4 text-base font-medium rounded-full cursor-pointer transition-all duration-300 ease-out;
-        @apply bg-brand-500 text-black border-none;
-    }
-
-    .btn-primary:hover {
-        @apply scale-105;
-        background: #d59a5b;
-        box-shadow: 0 20px 40px rgba(200, 130, 58, 0.25);
-    }
-
-    .btn-secondary {
-        @apply px-10 py-4 text-base font-medium rounded-full cursor-pointer transition-all duration-300 ease-out;
-        @apply text-white border;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-secondary:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
+    
+    .text-balance {
+        text-wrap: balance;
     }
 }

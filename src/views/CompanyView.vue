@@ -1,91 +1,67 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import Background from "../components/layout/Background.vue";
-import Navigation from "../components/layout/Navigation.vue";
-import Footer from "../components/layout/Footer.vue";
+import Background from '../components/layout/Background.vue';
+import Navigation from '../components/layout/Navigation.vue';
+import Footer from '../components/layout/Footer.vue';
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  if (typeof window !== "undefined" && (window as any).lucide) {
-    (window as any).lucide.createIcons();
-  }
+    window.scrollTo(0, 0);
 });
 </script>
 
 <template>
-  <Background />
-  <main
-    class="xl:rounded-[2rem] xl:p-10 overflow-hidden flex flex-col xl:max-w-[90rem] xl:shadow-2xl z-10 bg-[#0F0F0F] w-full border-white/5 border rounded-none pt-6 pr-6 pb-6 pl-6 relative shadow-none"
-  >
-    <Navigation />
+    <div class="relative min-h-screen bg-[#050505] font-sans selection:bg-brand-500/30">
+        <Background />
+        <Navigation />
 
-    <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-[#101010]">
-      <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Company</p>
-      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">About Zelavra</h1>
-      <p class="mt-4 max-w-3xl text-sm text-neutral-400">
-        Zelavra is a Nigerian energy-tech and fintech company focused on building an integrated platform that connects electricity distribution, smart metering, and digital payments.
-      </p>
-    </section>
+        <main class="relative z-10 w-full flex flex-col items-center pt-32 px-6">
+            <!-- Hero -->
+            <section class="w-full max-w-[90rem] mb-32 flex flex-col items-center text-center">
+                <span class="text-[0.6rem] font-bold uppercase tracking-[0.5em] text-brand-500 mb-8">About Zelavra</span>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-semibold text-white tracking-tighter leading-none mb-12">
+                    Power to the<br/>Community.
+                </h1>
+                <p class="text-xl text-neutral-400 max-w-2xl font-light leading-relaxed">
+                    We are an energy-tech and fintech company focused on building an integrated ecosystem for a more sustainable and electrified Nigeria.
+                </p>
+            </section>
 
-    <section class="z-20 relative grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6 lg:col-span-2">
-        <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-3">Why We Exist</p>
-        <h2 class="text-2xl font-heading font-semibold text-white mb-2">We don't wait for power. We bring it.</h2>
-        <p class="text-sm text-neutral-400 leading-relaxed">
-          We address the fragmented experience millions of Nigerians face when buying and receiving electricity — from token purchase to meter transmission to tracking daily usage.
-        </p>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-3">Our Promise</p>
-        <p class="text-sm text-neutral-400 leading-relaxed">
-          Simple, transparent energy and payments for every household, business, and community we serve.
-        </p>
-      </div>
-    </section>
+            <!-- Mission -->
+            <section class="w-full max-w-[90rem] grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+                <div class="p-12 md:p-16 rounded-[3rem] bg-white/5 border border-white/5 flex flex-col gap-8 justify-center">
+                     <h2 class="text-4xl md:text-5xl font-medium text-white tracking-tight leading-tight">
+                        We don't wait for power. We bring it.
+                    </h2>
+                    <p class="text-neutral-400 text-lg font-light leading-relaxed">
+                        Zelavra addresses the fragmented experience millions of Nigerians face when buying and receiving electricity — from token purchase to meter transmission to tracking daily usage.
+                    </p>
+                </div>
+                <div class="relative aspect-square rounded-[3rem] overflow-hidden bg-neutral-900 border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 hover:scale-105 transition-transform duration-[2s]" alt="Energy Tech">
+                </div>
+            </section>
 
-    <section class="z-20 relative border border-white/10 rounded-2xl p-8 md:p-10 bg-[#101010] mb-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Values</p>
-          <h2 class="text-2xl md:text-3xl font-heading font-semibold text-white tracking-tight">Built With Diversity at the Core</h2>
-        </div>
-        <p class="text-sm text-neutral-400 max-w-2xl">
-          Zelavra is powered by diverse teams across Nigeria and the diaspora, bringing regional insights into a single, unified product experience.
-        </p>
-      </div>
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-          <h3 class="text-white font-heading text-lg mb-2">Customer First</h3>
-          <p class="text-xs text-neutral-400 leading-relaxed">We design for real households, real cashflows, and real usage patterns.</p>
-        </div>
-        <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-          <h3 class="text-white font-heading text-lg mb-2">Reliability</h3>
-          <p class="text-xs text-neutral-400 leading-relaxed">Energy and payments are critical — our platform is built to be dependable.</p>
-        </div>
-        <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-          <h3 class="text-white font-heading text-lg mb-2">Transparency</h3>
-          <p class="text-xs text-neutral-400 leading-relaxed">Clear pricing, clear consumption data, and clear transaction history.</p>
-        </div>
-      </div>
-    </section>
+            <!-- Values -->
+            <section class="w-full max-w-[90rem] mb-32">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5">
+                        <h4 class="text-2xl font-medium text-white mb-4">Customer First</h4>
+                        <p class="text-neutral-400 font-light leading-relaxed">We design for real households, real cashflows, and real usage patterns.</p>
+                    </div>
+                    <div class="p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5">
+                        <h4 class="text-2xl font-medium text-white mb-4">Reliability</h4>
+                        <p class="text-neutral-400 font-light leading-relaxed">Energy and payments are critical — our platform is built to be dependable.</p>
+                    </div>
+                    <div class="p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5">
+                        <h4 class="text-2xl font-medium text-white mb-4">Transparency</h4>
+                        <p class="text-neutral-400 font-light leading-relaxed">Clear pricing, clear consumption data, and clear transaction history.</p>
+                    </div>
+                </div>
+            </section>
 
-    <section class="z-20 relative grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-3">Footprint</p>
-        <h3 class="text-white font-heading text-lg mb-2">Nationwide Coverage</h3>
-        <p class="text-xs text-neutral-400 leading-relaxed">Serving customers across all Nigerian DISCO regions.</p>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-3">Impact</p>
-        <h3 class="text-white font-heading text-lg mb-2">Millions of Units Tracked</h3>
-        <p class="text-xs text-neutral-400 leading-relaxed">Helping households monitor and optimize electricity usage daily.</p>
-      </div>
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6">
-        <p class="text-[0.6rem] uppercase tracking-widest text-brand-500 mb-3">Community</p>
-        <h3 class="text-white font-heading text-lg mb-2">Agents + Partners</h3>
-        <p class="text-xs text-neutral-400 leading-relaxed">A growing network of agents and partners enabling faster access.</p>
-      </div>
-    </section>
-
-    <Footer />
-  </main>
+             <div class="w-full max-w-[90rem] py-12">
+                <Footer />
+            </div>
+        </main>
+    </div>
 </template>

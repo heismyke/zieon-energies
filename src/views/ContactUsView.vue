@@ -1,48 +1,70 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import Background from "../components/layout/Background.vue";
-import Navigation from "../components/layout/Navigation.vue";
-import Footer from "../components/layout/Footer.vue";
+import Background from '../components/layout/Background.vue';
+import Navigation from '../components/layout/Navigation.vue';
+import Footer from '../components/layout/Footer.vue';
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  if (typeof window !== "undefined" && (window as any).lucide) {
-    (window as any).lucide.createIcons();
-  }
+    window.scrollTo(0, 0);
 });
 </script>
 
 <template>
-  <Background />
-  <main
-    class="xl:rounded-[2rem] xl:p-10 overflow-hidden flex flex-col xl:max-w-[90rem] xl:shadow-2xl z-10 bg-[#0F0F0F] w-full border-white/5 border rounded-none pt-6 pr-6 pb-6 pl-6 relative shadow-none"
-  >
-    <Navigation />
+    <div class="relative min-h-screen bg-[#050505] font-sans selection:bg-brand-500/30">
+        <Background />
+        <Navigation />
 
-    <section class="z-20 relative mb-6 border border-white/10 rounded-2xl p-8 md:p-12 bg-gradient-to-b from-[#131313] to-[#0D0D0D]">
-      <p class="text-[0.65rem] uppercase tracking-[0.2em] text-brand-400 mb-3">Contact Us</p>
-      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">Talk To The Zelavra Team</h1>
-      <p class="mt-4 max-w-2xl text-sm text-neutral-400">
-        Reach support, partnerships, or technical operations.
-      </p>
-    </section>
+        <main class="relative z-10 w-full flex flex-col items-center pt-32 px-6">
+            <!-- Hero -->
+            <section class="w-full max-w-[90rem] mb-32 flex flex-col items-center text-center">
+                <span class="text-[0.6rem] font-bold uppercase tracking-[0.5em] text-brand-500 mb-8">Contact</span>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-semibold text-white tracking-tighter leading-none mb-12">
+                    Connect.
+                </h1>
+                <p class="text-xl text-neutral-400 max-w-2xl font-light leading-relaxed">
+                    Whether you're looking for support, partnership, or to join our grid network.
+                </p>
+            </section>
 
-    <section class="z-20 relative grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-      <div class="bg-[#161616] border border-white/5 rounded-xl p-6 space-y-3">
-        <p class="text-[0.6rem] uppercase tracking-widest text-neutral-500">Channels</p>
-        <p class="text-sm text-white">support@zelavra.com</p>
-        <p class="text-sm text-white">+234 800 000 0000</p>
-        <p class="text-sm text-white">Lagos, Nigeria</p>
-      </div>
-      <form class="bg-[#161616] border border-white/5 rounded-xl p-6 flex flex-col gap-3">
-        <input type="text" placeholder="Name" class="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-3 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-brand-500/50" />
-        <input type="email" placeholder="Email" class="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-3 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-brand-500/50" />
-        <textarea placeholder="Message" rows="5" class="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-3 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-brand-500/50"></textarea>
-        <button type="button" class="mt-2 bg-brand-500 text-black text-xs font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-brand-400 transition-colors shadow-[0_12px_28px_rgba(200,130,58,0.22)]">
-          Send Message
-        </button>
-      </form>
-    </section>
+            <!-- Contact Form -->
+            <section class="w-full max-w-4xl mb-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div class="flex flex-col gap-10">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl font-medium text-white">General Inquiries</h3>
+                        <p class="text-neutral-500 font-light">info@zelavra.com</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl font-medium text-white">Technical Support</h3>
+                        <p class="text-neutral-500 font-light">support@zelavra.com</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl font-medium text-white">Business Partnerships</h3>
+                        <p class="text-neutral-500 font-light">partners@zelavra.com</p>
+                    </div>
+                </div>
 
-    <Footer />
-  </main>
+                <form class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[0.65rem] uppercase tracking-widest text-neutral-500 font-bold ml-1">Full Name</label>
+                        <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-brand-500/50 transition-all font-light" placeholder="John Doe">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[0.65rem] uppercase tracking-widest text-neutral-500 font-bold ml-1">Email Address</label>
+                        <input type="email" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-brand-500/50 transition-all font-light" placeholder="john@example.com">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[0.65rem] uppercase tracking-widest text-neutral-500 font-bold ml-1">Message</label>
+                        <textarea rows="6" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-brand-500/50 transition-all font-light resize-none" placeholder="How can we help?"></textarea>
+                    </div>
+                    <button class="px-12 py-5 bg-white text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-neutral-200 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </section>
+
+             <div class="w-full max-w-[90rem] py-12">
+                <Footer />
+            </div>
+        </main>
+    </div>
 </template>

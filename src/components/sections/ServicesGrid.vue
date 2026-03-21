@@ -1,56 +1,63 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// No extra logic needed for now
+</script>
 
 <template>
-    <!-- Left: Features/Services --> 
-    <div class="lg:col-span-7 flex flex-col gap-4"> 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> 
-            <!-- Card 1 --> 
-            <div class="group bg-[#161616] hover:bg-[#1A1A1A] border border-white/5 hover:border-brand-500/30 rounded-xl p-6 transition-all duration-500 cursor-pointer flex flex-col justify-between h-[200px]"> 
-                <div class="flex justify-between items-start"> 
-                    <div class="p-2.5 bg-brand-500/10 rounded-lg text-brand-400 border border-brand-500/10 group-hover:text-brand-300"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg> 
-                    </div> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-neutral-600 group-hover:text-white transition-colors"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg> 
-                </div> 
-                <div class=""> 
-                    <h3 class="text-lg font-medium text-white mb-1 tracking-tight font-heading">Zelavra Core</h3> 
-                    <p class="text-xs text-neutral-400 leading-relaxed tracking-wide">Buy electricity from all 12 Nigerian DISCOs, receive your token, and transmit directly to your meter.</p> 
-                </div> 
-            </div> 
-            <!-- Card 2 --> 
-            <div class="group bg-[#161616] hover:bg-[#1A1A1A] border border-white/5 hover:border-brand-500/30 rounded-xl p-6 transition-all duration-500 cursor-pointer flex flex-col justify-between h-[200px]"> 
-                <div class="flex justify-between items-start"> 
-                    <div class="p-2.5 bg-brand-500/10 rounded-lg text-brand-400 border border-brand-500/10 group-hover:text-brand-300"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg> 
-                    </div> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-neutral-600 group-hover:text-white transition-colors"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg> 
-                </div> 
-                <div class=""> 
-                    <h3 class="text-lg font-medium text-white mb-1 tracking-tight font-heading">Zelavra Share</h3> 
-                    <p class="text-xs text-neutral-400 leading-relaxed tracking-wide">Distribute units across multiple meters, set limits, and track usage from one dashboard.</p> 
-                </div> 
-            </div> 
-        </div> 
-        <!-- Wide Card --> 
-        <div class="group bg-[#161616] hover:bg-[#1A1A1A] border border-white/5 hover:border-brand-500/20 rounded-xl p-6 transition-all duration-500 cursor-pointer flex flex-col md:flex-row items-center justify-between gap-6 flex-grow relative overflow-hidden"> 
-            <div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-brand-900/10 to-transparent pointer-events-none"></div>
-            <div class="flex flex-col gap-2 max-w-sm relative z-10"> 
-                <div class="flex items-center gap-3"> 
-                    <div class="p-2.5 bg-brand-500/10 rounded-lg text-brand-400 border border-brand-500/10"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> 
-                    </div> 
-                    <h3 class="text-lg font-medium text-white tracking-tight font-heading">Zelavra Pay</h3> 
-                </div> 
-                <p class="text-xs text-neutral-400 leading-relaxed tracking-wide mt-2"> 
-                    Send and receive money, pay bills, buy airtime and data, and manage every transaction inside your energy app.
-                </p> 
-            </div> 
-            <div class="w-full md:w-auto relative z-10"> 
-                <div class="px-4 py-2 rounded-full border border-brand-500/40 bg-brand-500/10 text-xs font-medium uppercase tracking-wider text-brand-300 hover:bg-brand-500 hover:text-black transition-colors text-center"> 
-                    Explore Zelavra Pay 
-                </div> 
-            </div> 
-        </div> 
+    <div class="flex flex-col gap-12">
+        <div class="flex flex-col gap-4">
+            <span class="text-[0.6rem] font-bold uppercase tracking-[0.4em] text-brand-500">Digital Layer</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-medium text-white tracking-tight">The Ecosystem of Control.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1: Zelavra Core -->
+            <div class="group relative bg-white/5 border border-white/5 rounded-3xl p-8 overflow-hidden hover:bg-white/10 transition-all duration-700">
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-brand-500/10 rounded-full blur-[60px] group-hover:bg-brand-500/20 transition-all duration-700"></div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center mb-8 border border-brand-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-500"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-3 tracking-tight">Zelavra Core</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed font-light">Buy electricity from all 12 Nigerian DISCOs. Instant token delivery and direct transmission to your meter.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Zelavra Share -->
+            <div class="group relative bg-white/5 border border-white/5 rounded-3xl p-8 overflow-hidden hover:bg-white/10 transition-all duration-700">
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-neutral-500/10 rounded-full blur-[60px] group-hover:bg-neutral-500/20 transition-all duration-700"></div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-8 border border-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/60"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-3 tracking-tight">Zelavra Share</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed font-light">Distribute units across multiple meters, set limits, and track usage from one elegant dashboard.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Zelavra Pay (Large) -->
+            <div class="group relative bg-white/5 border border-white/5 rounded-3xl p-8 overflow-hidden hover:bg-white/10 transition-all duration-700 md:col-span-2">
+                <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-500/5 rounded-full blur-[100px] group-hover:bg-brand-500/10 transition-all duration-700"></div>
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center mb-8 border border-brand-500/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-500"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-3 tracking-tight">Zelavra Pay</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-light">Send money, pay bills, and manage every transaction inside your energy app. A complete fintech ecosystem built for speed.</p>
+                    </div>
+                    <div class="h-48 bg-black/40 rounded-2xl border border-white/5 backdrop-blur-md flex items-center justify-center">
+                        <!-- Abstract Data Visual Placeholder -->
+                        <div class="flex gap-2 items-end h-20">
+                            <div class="w-2 bg-brand-500/20 h-8 rounded-full"></div>
+                            <div class="w-2 bg-brand-500/40 h-16 rounded-full"></div>
+                            <div class="w-2 bg-brand-500/60 h-12 rounded-full"></div>
+                            <div class="w-2 bg-brand-500/80 h-20 rounded-full"></div>
+                            <div class="w-2 bg-brand-500 h-14 rounded-full shadow-[0_0_15px_#c8823a]"></div>
+                            <div class="w-2 bg-brand-500/40 h-10 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
-
