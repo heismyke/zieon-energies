@@ -12,7 +12,7 @@ const scrollToSection = (id: string) => {
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 px-4">
             <!-- Brand -->
             <div class="col-span-2 flex flex-col gap-6">
-                <span class="text-xl font-bold text-white tracking-tight">Zelavra</span>
+                <span class="text-xl font-bold text-white tracking-tight">zvnenergy</span>
                 <p class="text-sm text-neutral-500 font-light max-w-xs leading-relaxed">
                     The next generation of energy management. High-precision hardware and intelligent software unified into a single ecosystem.
                 </p>
@@ -24,7 +24,7 @@ const scrollToSection = (id: string) => {
                 <ul class="flex flex-col gap-4 text-sm text-neutral-500 font-light">
                     <li><button @click="scrollToSection('interface')" class="hover:text-brand-500 transition-colors text-left">The Interface</button></li>
                     <li><button @click="scrollToSection('features')" class="hover:text-brand-500 transition-colors text-left">Core Features</button></li>
-                    <li><button @click="scrollToSection('zelavra-ai')" class="hover:text-brand-500 transition-colors text-left">Zelavra AI</button></li>
+                    <li><button @click="scrollToSection('zvnenergy-ai')" class="hover:text-brand-500 transition-colors text-left">zvnenergy AI</button></li>
                 </ul>
             </div>
 
@@ -51,7 +51,7 @@ const scrollToSection = (id: string) => {
 
         <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/5 px-4 text-[0.65rem] text-neutral-600 font-medium uppercase tracking-[0.1em]">
             <div class="flex gap-8">
-                <span>© 2026 Zelavra Inc.</span>
+                <span>© 2026 zvnenergy Inc.</span>
                 <span>All Rights Reserved.</span>
             </div>
             <div class="flex gap-8">

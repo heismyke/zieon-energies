@@ -20,7 +20,7 @@ const reviews = [
     name: 'Sarah Alabi',
     role: 'Business Owner',
     content:
-      'Zelavra AI helped me identify that my industrial fridge was consuming 40% more power than it should. Saved me thousands in the first month.',
+      'zvnenergy AI helped me identify that my industrial fridge was consuming 40% more power than it should. Saved me thousands in the first month.',
     avatar: 'SA',
   },
   {
@@ -42,11 +42,11 @@ const reviews = [
 const faqs = [
   {
     q: 'Is the app free to use?',
-    a: 'Yes, the Zelavra app is free to download and use for monitoring. Premium features like Zelavra AI analytics are included with our hardware bundles.',
+    a: 'Yes, the zvnenergy app is free to download and use for monitoring. Premium features like zvnenergy AI analytics are included with our hardware bundles.',
   },
   {
     q: 'Can I use it with any meter?',
-    a: 'Zelavra supports most modern prepaid meters. For full automation and remote control, we recommend the Zelavra Smart Meter hardware.',
+    a: 'zvnenergy supports most modern prepaid meters. For full automation and remote control, we recommend the zvnenergy Smart Meter hardware.',
   },
   {
     q: 'How secure are my payments?',
@@ -143,7 +143,7 @@ const faqs = [
             Everything at a Glance.
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
-            The Zelavra Dashboard provides a unified view of your entire energy ecosystem. Monitor
+            The zvnenergy Dashboard provides a unified view of your entire energy ecosystem. Monitor
             your kWh balance in real-time, track historical consumption patterns, and manage
             multiple meters from a single, intuitive interface.
           </p>
@@ -164,7 +164,7 @@ const faqs = [
             <img
               src="/home1.png"
               class="w-full h-full object-cover"
-              alt="Zelavra Dashboard Overview"
+              alt="zvnenergy Dashboard Overview"
             />
           </div>
         </div>
@@ -191,7 +191,7 @@ const faqs = [
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
             Adding a new meter to your account is as simple as scanning a QR code or entering your
-            meter number. Whether it's your main residence, office, or a rental property, Zelavra
+            meter number. Whether it's your main residence, office, or a rental property, zvnenergy
             organizes them into a single manageable list.
           </p>
           <ul class="flex flex-col gap-4 mt-2">
@@ -260,9 +260,9 @@ const faqs = [
               class="w-full h-full rounded-[2rem] overflow-hidden bg-black border-[4px] border-white/5 shadow-2xl"
             >
               <img
-                src="/zelavra_share.png"
+                src="/zvnenergy_share.png"
                 class="w-full h-full object-cover"
-                alt="Zelavra Share confirmation"
+                alt="zvnenergy Share confirmation"
               />
             </div>
           </div>
@@ -275,7 +275,7 @@ const faqs = [
             Energy for Everyone.
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
-            Zelavra Share allows you to distribute energy units across your family, business, or
+            zvnenergy Share allows you to distribute energy units across your family, business, or
             rental meters in seconds. Transferring units is as simple and secure as sending money.
           </p>
           <div class="flex flex-col gap-4">
@@ -355,7 +355,7 @@ const faqs = [
 
       <!-- User Journey: Section 6 - Consumption/AI -->
       <section
-        id="zelavra-ai"
+        id="zvnenergy-ai"
         class="w-full max-w-7xl px-6 mb-48 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
       >
         <div class="relative aspect-[1206/2622] max-h-[700px] mx-auto order-1">
@@ -366,7 +366,7 @@ const faqs = [
             <img
               src="/consumption.png"
               class="w-full h-full object-cover"
-              alt="Zelavra AI Consumption Monitoring"
+              alt="zvnenergy AI Consumption Monitoring"
             />
           </div>
         </div>
@@ -378,7 +378,7 @@ const faqs = [
             Intelligent Monitoring.
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
-            Introducing our first proprietary model: <strong>Zelavra AI</strong>. Specifically
+            Introducing our first proprietary model: <strong>zvnenergy AI</strong>. Specifically
             engineered to monitor your electricity consumption, it analyzes your usage patterns to
             help you optimize energy costs and detect anomalies before they become expensive
             problems.
@@ -401,7 +401,7 @@ const faqs = [
             >User Stories</span
           >
           <h2 class="text-4xl md:text-5xl font-medium text-white tracking-tight">
-            Voices of Zelavra.
+            Voices of zvnenergy.
           </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -463,7 +463,7 @@ const faqs = [
               We're here to help.
             </h2>
             <p class="text-neutral-400 text-lg font-light leading-relaxed max-w-md">
-              Have questions about your meter, the app, or Zelavra AI? Our support team is available
+              Have questions about your meter, the app, or zvnenergy AI? Our support team is available
               24/7 to ensure your power remains uninterrupted.
             </p>
             <div class="flex flex-col gap-6 mt-4">
@@ -488,7 +488,7 @@ const faqs = [
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                 </div>
-                <span class="text-sm font-medium tracking-wide">support@zelavra.com</span>
+                <span class="text-sm font-medium tracking-wide">support@zvnenergy.com</span>
               </div>
               <div
                 class="flex items-center gap-4 text-white hover:text-brand-500 transition-colors cursor-pointer group"
@@ -512,7 +512,7 @@ const faqs = [
                     />
                   </svg>
                 </div>
-                <span class="text-sm font-medium tracking-wide">+234 (0) 800 ZELAVRA</span>
+                <span class="text-sm font-medium tracking-wide">+234 (0) 800 ZVNENERGY</span>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@
         <div class="relative z-10 flex flex-col h-full"> 
             <div class="flex flex-col gap-4 mb-10">
                 <span class="text-[0.6rem] font-bold uppercase tracking-[0.4em] text-brand-500">Early Access</span>
-                <h3 class="text-3xl font-heading font-medium text-white tracking-tight">Join the Zelavra Ecosystem.</h3> 
+                <h3 class="text-3xl font-heading font-medium text-white tracking-tight">Join the zvnenergy Ecosystem.</h3>
                 <p class="text-sm text-neutral-400 font-light">Be the first to experience the seamless integration of energy and finance.</p> 
             </div>
 

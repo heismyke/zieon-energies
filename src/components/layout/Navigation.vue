@@ -31,7 +31,7 @@ const scrollToSection = (id: string) => {
     >
       <span
         class="text-lg font-bold text-white tracking-tight group-hover:text-neutral-400 transition-colors"
-        >Zelavra</span
+        >zvnenergy</span
       >
     </a>
 

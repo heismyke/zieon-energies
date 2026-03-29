@@ -37,7 +37,7 @@ onMounted(() => {
             </h1> 
             
             <p class="mt-4 max-w-3xl text-base md:text-xl text-neutral-400 leading-relaxed tracking-wide font-light animate-fade-in" style="animation-delay: 1s; opacity: 0; animation-fill-mode: forwards;"> 
-                From smart solar hardware to unified digital payments. Zelavra is building the complete ecosystem for sustainable power and financial freedom.
+                From smart solar hardware to unified digital payments. zvnenergy is building the complete ecosystem for sustainable power and financial freedom.
             </p> 
 
             <div class="mt-12 flex flex-col sm:flex-row items-center gap-4 animate-fade-in" style="animation-delay: 1.2s; opacity: 0; animation-fill-mode: forwards;">
