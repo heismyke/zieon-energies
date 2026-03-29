@@ -20,7 +20,7 @@ const reviews = [
     name: 'Sarah Alabi',
     role: 'Business Owner',
     content:
-      'zvnenergy AI helped me identify that my industrial fridge was consuming 40% more power than it should. Saved me thousands in the first month.',
+      'zvnenergy AI helped me identify that my industrial fridge was consuming 30% more power than it should. Saved me thousands in the first month.',
     avatar: 'SA',
   },
   {
@@ -463,8 +463,8 @@ const faqs = [
               We're here to help.
             </h2>
             <p class="text-neutral-400 text-lg font-light leading-relaxed max-w-md">
-              Have questions about your meter, the app, or zvnenergy AI? Our support team is available
-              24/7 to ensure your power remains uninterrupted.
+              Have questions about your meter, the app, or zvnenergy AI? Our support team is
+              available 24/7 to ensure your power remains uninterrupted.
             </p>
             <div class="flex flex-col gap-6 mt-4">
               <div
