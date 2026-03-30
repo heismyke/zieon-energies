@@ -29,10 +29,13 @@ const scrollToSection = (id: string) => {
       @click.prevent="scrollToSection('#home')"
       class="flex items-center z-[70] group relative"
     >
-      <span
-        class="text-lg font-bold text-white tracking-tight group-hover:text-neutral-400 transition-colors"
-        >zvnenergy</span
-      >
+      <img
+        src="/zvn_logo.svg"
+        alt="zvnenergy logo"
+        class="h-8 w-auto mr-2"
+        style="display:inline-block;vertical-align:middle;"
+      />
+      <span class="text-lg font-bold text-white tracking-tight group-hover:text-neutral-400 transition-colors ml-2">zvnenergy</span>
     </a>
 
     <!-- Centered Links (Desktop) -->
