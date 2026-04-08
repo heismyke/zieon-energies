@@ -20,6 +20,14 @@
 }
 
 @layer utilities {
+    .font-brand {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+    }
+
+    .word-spaced {
+        word-spacing: 0.35em;
+    }
+
     .glass-card {
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(20px);

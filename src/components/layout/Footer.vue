@@ -11,8 +11,25 @@ const scrollToSection = (id: string) => {
   <footer class="w-full pt-24 pb-12 flex flex-col gap-16 border-t border-white/5 mt-24">
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 px-4">
       <!-- Brand -->
-      <div class="col-span-2 flex flex-col gap-6">
-        <span class="text-xl font-bold text-white tracking-tight">zvnenergy</span>
+      <div class="col-span-2 flex flex-col items-start gap-6">
+        <div class="flex flex-col leading-none gap-0">
+          <div class="flex items-center gap-0">
+            <span
+              class="text-[1.4rem] md:text-[1.6rem] font-extrabold tracking-[0.35em] text-white font-brand"
+              >ZVN</span
+            >
+            <img
+              src="/zvn.png"
+              alt="zievon energy logo"
+              class="h-16 md:h-20 w-auto object-contain block -ml-1"
+              style="display: inline-block; vertical-align: middle"
+            />
+          </div>
+          <span
+            class="text-[0.7rem] md:text-[0.75rem] font-semibold tracking-[0.3em] text-neutral-400 font-brand word-spaced -mt-1"
+            >ZIEVON ENERGY</span
+          >
+        </div>
         <p class="text-sm text-neutral-500 font-light max-w-xs leading-relaxed">
           The next generation of energy management. High-precision hardware and intelligent software
           unified into a single ecosystem.
@@ -44,7 +61,7 @@ const scrollToSection = (id: string) => {
               @click="scrollToSection('zvnenergy-ai')"
               class="hover:text-brand-500 transition-colors text-left"
             >
-              zvnenergy AI
+              zievon energy AI
             </button>
           </li>
         </ul>
@@ -96,7 +113,7 @@ const scrollToSection = (id: string) => {
       class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/5 px-4 text-[0.65rem] text-neutral-600 font-medium uppercase tracking-[0.1em]"
     >
       <div class="flex gap-8">
-        <span>© 2026 zvnenergy Inc.</span>
+        <span>© 2026 zievon energy Inc.</span>
         <span>All Rights Reserved.</span>
       </div>
       <div class="flex gap-8">

@@ -14,7 +14,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Card 1: zvnenergy Core -->
+      <!-- Card 1: zievon energy Core -->
       <div
         class="group relative bg-white/5 border border-white/5 rounded-3xl p-8 overflow-hidden hover:bg-white/10 transition-all duration-700"
       >
@@ -41,7 +41,7 @@
             </svg>
           </div>
           <h3 class="text-2xl font-heading font-bold text-white mb-3 tracking-tight">
-            zvnenergy Core
+            zievon energy Core
           </h3>
           <p class="text-sm text-neutral-400 leading-relaxed font-light">
             Buy electricity from all 12 Nigerian DISCOs. Instant token delivery and direct
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <!-- Card 2: zvnenergy Share -->
+      <!-- Card 2: zievon energy Share -->
       <div
         class="group relative bg-white/5 border border-white/5 rounded-3xl p-8 overflow-hidden hover:bg-white/10 transition-all duration-700"
       >
@@ -81,7 +81,7 @@
             </svg>
           </div>
           <h3 class="text-2xl font-heading font-bold text-white mb-3 tracking-tight">
-            zvnenergy Share
+            zievon energy Share
           </h3>
           <p class="text-sm text-neutral-400 leading-relaxed font-light">
             Distribute units across multiple meters, set limits, and track usage from one elegant
@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <!-- Card 3: zvnenergy Pay (Large) -->
+      <!-- Card 3: zievon energy Pay (Large) -->
       <div
         class="group relative bg-white/5 border border-white/5 rounded-3xl p-8 overflow-hidden hover:bg-white/10 transition-all duration-700 md:col-span-2"
       >
@@ -119,7 +119,7 @@
               </svg>
             </div>
             <h3 class="text-2xl font-heading font-bold text-white mb-3 tracking-tight">
-              zvnenergy Pay
+              zievon energy Pay
             </h3>
             <p class="text-sm text-neutral-400 leading-relaxed font-light">
               Send money, pay bills, and manage every transaction inside your energy app. A complete

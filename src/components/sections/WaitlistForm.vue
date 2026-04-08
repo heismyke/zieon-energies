@@ -12,7 +12,7 @@
           >Early Access</span
         >
         <h3 class="text-3xl font-heading font-medium text-white tracking-tight">
-          Join the zvnenergy Ecosystem.
+          Join the zievon energy Ecosystem.
         </h3>
         <p class="text-sm text-neutral-400 font-light">
           Be the first to experience the seamless integration of energy and finance.

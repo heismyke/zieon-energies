@@ -20,7 +20,7 @@ const reviews = [
     name: 'Sarah Alabi',
     role: 'Business Owner',
     content:
-      'zvnenergy AI helped me identify that my industrial fridge was consuming 30% more power than it should. Saved me thousands in the first month.',
+      'zievon energy AI helped me identify that my industrial fridge was consuming 30% more power than it should. Saved me thousands in the first month.',
     avatar: 'SA',
   },
   {
@@ -42,11 +42,11 @@ const reviews = [
 const faqs = [
   {
     q: 'Is the app free to use?',
-    a: 'Yes, the zvnenergy app is free to download and use for monitoring. Premium features like zvnenergy AI analytics are included with our hardware bundles.',
+    a: 'Yes, the zievon energy app is free to download and use for monitoring. Premium features like zievon energy AI analytics are included with our hardware bundles.',
   },
   {
     q: 'Can I use it with any meter?',
-    a: 'zvnenergy supports most modern prepaid meters. For full automation and remote control, we recommend the zvnenergy Smart Meter hardware.',
+    a: 'zievon energy supports most modern prepaid meters. For full automation and remote control, we recommend the zievon energy Smart Meter hardware.',
   },
   {
     q: 'How secure are my payments?',
@@ -143,7 +143,7 @@ const faqs = [
             Everything at a Glance.
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
-            The zvnenergy Dashboard provides a unified view of your entire energy ecosystem. Monitor
+            The zievon energy Dashboard provides a unified view of your entire energy ecosystem. Monitor
             your kWh balance in real-time, track historical consumption patterns, and manage
             multiple meters from a single, intuitive interface.
           </p>
@@ -164,7 +164,7 @@ const faqs = [
             <img
               src="/home1.png"
               class="w-full h-full object-cover"
-              alt="zvnenergy Dashboard Overview"
+              alt="zievon energy Dashboard Overview"
             />
           </div>
         </div>
@@ -191,8 +191,8 @@ const faqs = [
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
             Adding a new meter to your account is as simple as scanning a QR code or entering your
-            meter number. Whether it's your main residence, office, or a rental property, zvnenergy
-            organizes them into a single manageable list.
+            meter number. Whether it's your main residence, office, or a rental property, zievon
+            energy organizes them into a single manageable list.
           </p>
           <ul class="flex flex-col gap-4 mt-2">
             <li class="flex items-center gap-3 text-neutral-300 text-sm">
@@ -207,7 +207,7 @@ const faqs = [
         </div>
       </section>
 
-      <!-- User Journey: Section 3 - Calculator -->
+      <!-- User Journey: Section 3 - Intelligent Monitoring.Calculator -->
       <section
         class="w-full max-w-7xl px-6 mb-48 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
       >
@@ -262,7 +262,7 @@ const faqs = [
               <img
                 src="/zvnenergy_share.png"
                 class="w-full h-full object-cover"
-                alt="zvnenergy Share confirmation"
+                alt="zievon energy Share confirmation"
               />
             </div>
           </div>
@@ -275,7 +275,7 @@ const faqs = [
             Energy for Everyone.
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
-            zvnenergy Share allows you to distribute energy units across your family, business, or
+            zievon energy Share allows you to distribute energy units across your family, business, or
             rental meters in seconds. Transferring units is as simple and secure as sending money.
           </p>
           <div class="flex flex-col gap-4">
@@ -366,7 +366,7 @@ const faqs = [
             <img
               src="/consumption.png"
               class="w-full h-full object-cover"
-              alt="zvnenergy AI Consumption Monitoring"
+              alt="zievon energy AI Consumption Monitoring"
             />
           </div>
         </div>
@@ -378,7 +378,7 @@ const faqs = [
             Intelligent Monitoring.
           </h2>
           <p class="text-neutral-400 text-lg font-light leading-relaxed">
-            Introducing our first proprietary model: <strong>zvnenergy AI</strong>. Specifically
+            Introducing our first proprietary model: <strong>zievon energy AI</strong>. Specifically
             engineered to monitor your electricity consumption, it analyzes your usage patterns to
             help you optimize energy costs and detect anomalies before they become expensive
             problems.
@@ -401,7 +401,7 @@ const faqs = [
             >User Stories</span
           >
           <h2 class="text-4xl md:text-5xl font-medium text-white tracking-tight">
-            Voices of zvnenergy.
+            Voices of zievon energy.
           </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -463,7 +463,7 @@ const faqs = [
               We're here to help.
             </h2>
             <p class="text-neutral-400 text-lg font-light leading-relaxed max-w-md">
-              Have questions about your meter, the app, or zvnenergy AI? Our support team is
+              Have questions about your meter, the app, or zievon energy AI? Our support team is
               available 24/7 to ensure your power remains uninterrupted.
             </p>
             <div class="flex flex-col gap-6 mt-4">

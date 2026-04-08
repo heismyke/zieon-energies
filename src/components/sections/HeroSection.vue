@@ -61,7 +61,7 @@ onMounted(() => {
         class="mt-4 max-w-3xl text-base md:text-xl text-neutral-400 leading-relaxed tracking-wide font-light animate-fade-in"
         style="animation-delay: 1s; opacity: 0; animation-fill-mode: forwards"
       >
-        From smart solar hardware to unified digital payments. zvnenergy is building the complete
+        From smart solar hardware to unified digital payments. zievon energy is building the complete
         ecosystem for sustainable power and financial freedom.
       </p>
 
