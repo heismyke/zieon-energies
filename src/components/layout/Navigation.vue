@@ -27,26 +27,18 @@ const scrollToSection = (id: string) => {
     <a
       href="#home"
       @click.prevent="scrollToSection('#home')"
-      class="flex items-center z-[70] group relative gap-3"
+      class="flex items-center z-[70] group relative"
     >
-      <div class="flex items-center gap-3">
-        <img
-          src="/zvn.png"
-          alt="zievon energy logo"
-          class="h-12 md:h-14 w-auto object-contain"
-          style="display: inline-block; vertical-align: middle"
-        />
-        <div class="flex flex-col leading-none">
-          <span
-            class="text-[1.3rem] md:text-[1.5rem] font-extrabold tracking-[0.35em] text-white font-brand"
-            >ZVN</span
-          >
-          <span
-            class="text-[0.65rem] md:text-[0.7rem] font-semibold tracking-[0.3em] text-neutral-400 font-brand word-spaced"
-            >ZIEVON ENERGY</span
-          >
-        </div>
-      </div>
+      <img
+        src="/zvn.png"
+        alt="zvnenergy logo"
+        class="h-16 w-auto mr-1"
+        style="display: inline-block; vertical-align: middle"
+      />
+      <span
+        class="text-lg font-bold text-white tracking-tight group-hover:text-neutral-400 transition-colors ml-1"
+        >zvnenergy</span
+      >
     </a>
 
     <!-- Centered Links (Desktop) -->
