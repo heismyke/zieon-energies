@@ -7,49 +7,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Inter', 'sans-serif'],
-        mono: ['monospace'], // Fallback
+        sans: ['var(--font-body)'],
+        heading: ['var(--font-display)'],
+        mono: ['var(--font-mono)'],
       },
       colors: {
-        'glass-white': 'rgba(255, 255, 255, 0.05)',
-        'glass-border': 'rgba(255, 255, 255, 0.1)',
         brand: {
-          900: '#3b2412',
-          700: '#7a4a24',
-          500: '#c8823a',
-          400: '#d59a5b',
-          300: '#e3b680',
-        },
-        accent: {
-          magenta: '#d51d7f',
-        },
-      },
-      backdropBlur: {
-        'glass': '20px',
-      },
-      animation: {
-        'fade-in-up': 'fadeInUp 0.8s ease forwards',
-        'gradient-shift': 'gradientShift 15s ease infinite',
-        'rotate': 'rotate 8s linear infinite',
-      },
-      keyframes: {
-        fadeInUp: {
-          'from': {
-            opacity: '0',
-            transform: 'translateY(20px)',
-          },
-          'to': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-        gradientShift: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.7' },
-        },
-        rotate: {
-          'to': { transform: 'rotate(360deg)' },
+          950: '#16110b',
+          700: '#6b5844',
+          500: '#ff7a1a',
+          300: '#f7efe0',
+          200: '#faf3e6',
+          100: '#b7a593',
         },
       },
     },
