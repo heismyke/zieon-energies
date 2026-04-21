@@ -1057,6 +1057,12 @@ svg {
   padding-top: 1.5rem;
 }
 
+.how-it-works__steps--stacked {
+  position: relative;
+  display: block;
+  padding-top: 0;
+}
+
 .step-card {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(20rem, 1fr);
@@ -1064,6 +1070,7 @@ svg {
   min-height: 33rem;
   padding: 1.5rem 1.5rem 1.5rem 2rem;
   background: var(--color-beige-1);
+  box-shadow: 0 20px 50px rgba(17, 17, 17, 0.08);
 }
 
 .step-card__copy {

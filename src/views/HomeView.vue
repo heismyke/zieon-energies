@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import type { ComponentPublicInstance } from "vue";
+import { nextTick, onBeforeUnmount, onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
 import SiteFooter from "../components/site/SiteFooter.vue";
+import { gsap } from "../lib/gsap";
 import SiteHero from "../components/site/SiteHero.vue";
 import SiteHeader from "../components/site/SiteHeader.vue";
 
@@ -30,6 +33,113 @@ const steps = [
     art: "empty",
   },
 ];
+
+const stepsContainer = ref<HTMLElement | null>(null);
+const stepCardRefs = ref<HTMLElement[]>([]);
+const stepsStacked = ref(false);
+
+const setStepCardRef = (
+  element: Element | ComponentPublicInstance | null,
+  _refs?: Record<string, unknown>,
+) => {
+  if (element instanceof HTMLElement && !stepCardRefs.value.includes(element)) {
+    stepCardRefs.value.push(element);
+  }
+};
+
+let teardownStack: (() => void) | null = null;
+
+const setupStepsStack = async () => {
+  await nextTick();
+
+  teardownStack?.();
+  teardownStack = null;
+  stepCardRefs.value = stepCardRefs.value.slice(0, steps.length);
+
+  const container = stepsContainer.value;
+  const cards = stepCardRefs.value;
+
+  if (!container || cards.length !== steps.length) {
+    return;
+  }
+
+  const media = gsap.matchMedia();
+
+  media.add("(min-width: 961px)", () => {
+    stepsStacked.value = true;
+
+    const firstCardHeight = cards[0]?.offsetHeight ?? 0;
+    container.style.height = `${firstCardHeight}px`;
+
+    gsap.set(cards, {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+    });
+
+    gsap.set(cards, {
+      zIndex: (index) => index + 1,
+    });
+
+    gsap.set(cards.slice(1), {
+      yPercent: 110,
+    });
+
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        start: "top top+=96",
+        end: `+=${cards.length * 90}%`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+      },
+    });
+
+    cards.slice(1).forEach((card) => {
+      timeline.to(
+        card,
+        {
+          yPercent: 0,
+          ease: "none",
+          duration: 1,
+        },
+        "+=0.2",
+      );
+    });
+
+    return () => {
+      timeline.scrollTrigger?.kill();
+      timeline.kill();
+      container.style.height = "";
+      gsap.set(cards, { clearProps: "all" });
+      stepsStacked.value = false;
+    };
+  });
+
+  media.add("(max-width: 960px)", () => {
+    stepsStacked.value = false;
+    container.style.height = "";
+    gsap.set(cards, { clearProps: "all" });
+  });
+
+  teardownStack = () => {
+    media.revert();
+    stepsStacked.value = false;
+    if (container) {
+      container.style.height = "";
+    }
+  };
+};
+
+onMounted(() => {
+  setupStepsStack();
+});
+
+onBeforeUnmount(() => {
+  teardownStack?.();
+});
 </script>
 
 <template>
@@ -95,8 +205,16 @@ const steps = [
           </RouterLink>
         </div>
 
-        <div class="how-it-works__steps">
-          <article v-for="step in steps" :key="step.title" class="step-card">
+        <div
+          ref="stepsContainer"
+          :class="['how-it-works__steps', { 'how-it-works__steps--stacked': stepsStacked }]"
+        >
+          <article
+            v-for="step in steps"
+            :key="step.title"
+            :ref="setStepCardRef"
+            class="step-card"
+          >
             <div class="step-card__copy">
               <p class="eyebrow">{{ step.step }}</p>
               <h3 class="section-title section-title--compact">{{ step.title }}</h3>
