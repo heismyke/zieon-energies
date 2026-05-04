@@ -15,24 +15,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/partners",
     name: "Partners",
-    component: () => import("../views/GenericPageView.vue"),
-    props: {
-      eyebrow: "PARTNERS",
-      title: "Built for the companies moving energy forward.",
-      description:
-        "This page is scaffolded for partner messaging, network benefits, and future conversion sections.",
-    },
+    component: () => import("../views/PartnersView.vue"),
   },
   {
     path: "/about",
     name: "About",
-    component: () => import("../views/GenericPageView.vue"),
-    props: {
-      eyebrow: "ABOUT",
-      title: "A brand focused on resilient home power.",
-      description:
-        "The about page is ready for the team story, mission narrative, and supporting media.",
-    },
+    component: () => import("../views/AboutView.vue"),
   },
   {
     path: "/brand",
@@ -51,7 +39,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../views/GenericPageView.vue"),
     props: {
       eyebrow: "GET STARTED",
-      title: "Start your zievon estimate.",
+      title: "Start your zieon energies estimate.",
       description:
         "The CTA route is ready for qualification forms, intake steps, and future onboarding flows.",
     },

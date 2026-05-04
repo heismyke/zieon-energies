@@ -27,7 +27,7 @@ const links = [
               />
             </svg>
           </span>
-          <span class="brand-mark__text">zievon</span>
+          <span class="brand-mark__text">zieon energies</span>
         </RouterLink>
         <p class="site-footer__copy">More power</p>
       </div>

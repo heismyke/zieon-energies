@@ -34,7 +34,7 @@ const closeMenu = () => {
             />
           </svg>
         </span>
-        <span class="brand-mark__text">zievon</span>
+        <span class="brand-mark__text">zieon energies</span>
       </RouterLink>
 
       <nav class="nav-links" aria-label="Primary">
@@ -79,3 +79,37 @@ const closeMenu = () => {
     </div>
   </header>
 </template>
+
+<style scoped>
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  right: 1rem;
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav__link {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobile-nav__cta {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  background: var(--color-gradient);
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+</style>
