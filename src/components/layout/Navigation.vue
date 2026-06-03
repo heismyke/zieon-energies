@@ -23,21 +23,15 @@ const scrollToSection = (id: string) => {
   <nav
     class="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between px-8 py-5 md:px-12 transition-all duration-300 isolate bg-[#050505] border-b border-white/5"
   >
-    <!-- Logo -->
+    <!-- Logo Text -->
     <a
       href="#home"
       @click.prevent="scrollToSection('#home')"
       class="flex items-center z-[70] group relative"
     >
-      <img
-        src="/zvn.png"
-        alt="zvnenergy logo"
-        class="h-16 w-auto mr-1"
-        style="display: inline-block; vertical-align: middle"
-      />
       <span
-        class="text-lg font-bold text-white tracking-tight group-hover:text-neutral-400 transition-colors ml-1"
-        >zvnenergy</span
+        class="text-title font-bold text-white tracking-tight group-hover:text-neutral-400 transition-colors"
+        >zieon energies</span
       >
     </a>
 
@@ -48,7 +42,7 @@ const scrollToSection = (id: string) => {
         :key="link.name"
         :href="link.href"
         @click.prevent="scrollToSection(link.href)"
-        class="text-sm font-medium text-white/90 hover:bg-white/10 px-4 py-2 rounded-md transition-all duration-300"
+        class="copy-text font-medium text-white/90 hover:bg-white/10 px-4 py-2 rounded-md transition-all duration-300"
       >
         {{ link.name }}
       </a>
@@ -57,7 +51,7 @@ const scrollToSection = (id: string) => {
     <!-- Right Side (Desktop) -->
     <div class="hidden md:flex gap-4 items-center z-[70]">
       <button
-        class="px-6 py-2 bg-brand-500 text-black text-[0.7rem] font-bold uppercase tracking-widest hover:bg-brand-400 transition-all shadow-lg shadow-brand-500/20"
+        class="px-6 py-2 bg-brand-500 text-black eyebrow hover:bg-brand-400 transition-all shadow-lg shadow-brand-500/20"
       >
         Download
       </button>

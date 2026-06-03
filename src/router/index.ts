@@ -6,7 +6,48 @@ const routes: RouteRecordRaw[] = [
     path: "/",
     name: "Home",
     component: () => import("../views/HomeView.vue"),
-  }
+  },
+  {
+    path: "/product",
+    name: "Product",
+    component: () => import("../views/ProductView.vue"),
+  },
+  {
+    path: "/zenerlink",
+    name: "Zenerlink",
+    component: () => import("../views/ZenerlinkView.vue"),
+  },
+  {
+    path: "/partners",
+    name: "Partners",
+    component: () => import("../views/PartnersView.vue"),
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import("../views/AboutView.vue"),
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("../views/BlogView.vue"),
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import("../views/ContactView.vue"),
+  },
+  {
+    path: "/brand",
+    name: "Brand",
+    component: () => import("../views/GenericPageView.vue"),
+    props: {
+      eyebrow: "BRAND",
+      title: "A system designed to feel precise, warm, and modern.",
+      description:
+        "This route is prepared for brand assets, guidelines, and downloadable materials.",
+    },
+  },
 ];
 
 const router = createRouter({
