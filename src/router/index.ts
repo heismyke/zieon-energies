@@ -13,6 +13,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../views/ProductView.vue"),
   },
   {
+    path: "/zenerlink",
+    name: "Zenerlink",
+    component: () => import("../views/ZenerlinkView.vue"),
+  },
+  {
     path: "/partners",
     name: "Partners",
     component: () => import("../views/PartnersView.vue"),
@@ -23,6 +28,16 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../views/AboutView.vue"),
   },
   {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("../views/BlogView.vue"),
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import("../views/ContactView.vue"),
+  },
+  {
     path: "/brand",
     name: "Brand",
     component: () => import("../views/GenericPageView.vue"),
@@ -31,17 +46,6 @@ const routes: RouteRecordRaw[] = [
       title: "A system designed to feel precise, warm, and modern.",
       description:
         "This route is prepared for brand assets, guidelines, and downloadable materials.",
-    },
-  },
-  {
-    path: "/get-started",
-    name: "GetStarted",
-    component: () => import("../views/GenericPageView.vue"),
-    props: {
-      eyebrow: "GET STARTED",
-      title: "Start your zieon energies estimate.",
-      description:
-        "The CTA route is ready for qualification forms, intake steps, and future onboarding flows.",
     },
   },
 ];

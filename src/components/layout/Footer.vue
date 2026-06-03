@@ -13,8 +13,8 @@ const scrollToSection = (id: string) => {
       <!-- Brand -->
       <div class="col-span-2 flex flex-col gap-6">
         <img src="/zvn.png" alt="zvnenergy logo" class="h-12 w-auto mb-2" style="display: inline-block; vertical-align: middle" />
-        <span class="text-xl font-bold text-white tracking-tight">zvnenergy</span>
-        <p class="text-sm text-neutral-500 font-light max-w-xs leading-relaxed">
+        <span class="text-title font-bold text-white tracking-tight">zvnenergy</span>
+        <p class="copy-text text-neutral-500 max-w-xs">
           The next generation of energy management. High-precision hardware and intelligent software
           unified into a single ecosystem.
         </p>
@@ -22,8 +22,8 @@ const scrollToSection = (id: string) => {
 
       <!-- Product -->
       <div class="flex flex-col gap-6">
-        <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white">Product</h4>
-        <ul class="flex flex-col gap-4 text-sm text-neutral-500 font-light">
+        <h4 class="eyebrow text-white">Product</h4>
+        <ul class="flex flex-col gap-4 copy-text text-neutral-500">
           <li>
             <button
               @click="scrollToSection('interface')"
@@ -53,8 +53,8 @@ const scrollToSection = (id: string) => {
 
       <!-- Company -->
       <div class="flex flex-col gap-6">
-        <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white">Resources</h4>
-        <ul class="flex flex-col gap-4 text-sm text-neutral-500 font-light">
+        <h4 class="eyebrow text-white">Resources</h4>
+        <ul class="flex flex-col gap-4 copy-text text-neutral-500">
           <li>
             <button
               @click="scrollToSection('faq')"
@@ -84,8 +84,8 @@ const scrollToSection = (id: string) => {
 
       <!-- Legal -->
       <div class="flex flex-col gap-6">
-        <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white">Connect</h4>
-        <ul class="flex flex-col gap-4 text-sm text-neutral-500 font-light">
+        <h4 class="eyebrow text-white">Connect</h4>
+        <ul class="flex flex-col gap-4 copy-text text-neutral-500">
           <li><a href="#" class="hover:text-brand-500 transition-colors">Twitter / X</a></li>
           <li><a href="#" class="hover:text-brand-500 transition-colors">LinkedIn</a></li>
           <li><a href="#" class="hover:text-brand-500 transition-colors">Instagram</a></li>
@@ -94,7 +94,7 @@ const scrollToSection = (id: string) => {
     </div>
 
     <div
-      class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/5 px-4 text-[0.65rem] text-neutral-600 font-medium uppercase tracking-[0.1em]"
+      class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/5 px-4 eyebrow text-neutral-600"
     >
       <div class="flex gap-8">
         <span>© 2026 zvnenergy Inc.</span>

@@ -5,10 +5,10 @@
   --font-mono: "ABC Social Mono", "SFMono-Regular", "Roboto Mono", "Courier New", monospace;
   --color-orange: #f66f00;
   --color-orange-glow: #fccc3c;
-  --color-beige: #fff7e9;
-  --color-beige-1: #f7eed9;
-  --color-beige-2: #f0e5cf;
-  --color-dark-beige: #dacab6;
+  --color-beige: #fdfaf5; /* Off-white theme */
+  --color-beige-1: #f9f6f0;
+  --color-beige-2: #f2eee6;
+  --color-dark-beige: #e9e3d8;
   --color-black: #111111;
   --color-grey: #a09b93;
   --color-white: #ffffff;
@@ -31,6 +31,7 @@
 
 body {
   overflow-x: hidden;
+  background: var(--color-beige);
 }
 
 img,
@@ -38,9 +39,43 @@ svg {
   display: block;
   max-width: 100%;
 }
+/* Animation Utilities for GSAP */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
 
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  will-change: transform, opacity;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  will-change: transform, opacity;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.98);
+  will-change: transform, opacity;
+}
+
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-element {
+  will-change: transform;
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -48,104 +83,31 @@ svg {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(76, 40, 6, 0.22);
-  border-radius: 999px;
+  background: #cbd5e1;
+  border-radius: 4px;
 }
 
-.site-page {
-  min-height: 100vh;
-  background: var(--color-beige);
-  color: var(--color-black);
+/* Navbar Base Styles - Less Rounded, More Precise */
+.header-container {
+  @apply fixed inset-x-0 top-8 z-50 px-6 flex justify-center;
 }
 
-.site-header {
-  position: fixed;
-  inset: 1.5rem 0 auto;
-  z-index: 50;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
+.header-glass {
+  @apply bg-white/95 backdrop-blur-xl border border-black/10 px-8 py-3 rounded-lg flex items-center justify-between shadow-sm transition-all duration-300;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.nav-shell {
-  width: auto;
-  min-width: min(calc(100% - 2rem), 52rem);
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  padding: 0.5rem 0.6rem 0.5rem 1.25rem;
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
+.header-glass:hover {
+  @apply shadow-md border-black/20;
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  white-space: nowrap;
+.nav-link-item {
+  @apply font-sans text-[0.9rem] font-medium tracking-tight text-black/60 hover:text-black transition-colors;
 }
 
-.brand-mark__icon {
-  width: 1.6rem;
-  color: var(--color-black);
-}
-
-.brand-mark__text {
-  font-family: var(--font-body);
-  font-size: 1.35rem;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.75rem;
-}
-
-.nav-link {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: rgba(17, 17, 17, 0.7);
-  transition: color 160ms ease;
-}
-
-.nav-link:hover,
-.nav-link--active {
-  color: var(--color-black);
-}
-
-.nav-cta,
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.8rem;
-  padding: 0 1.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid transparent;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease,
-    color 180ms ease, border-color 180ms ease;
-}
-
-.nav-cta {
-  border-radius: 999px;
-  background: var(--color-gradient);
-  color: white;
-}
-
-.nav-cta:hover,
-.button:hover {
-  transform: translateY(-1px);
+.nav-cta-btn {
+  @apply bg-brand-500 text-white px-6 py-2 rounded-md font-sans text-sm font-semibold transition-all hover:bg-brand-600 hover:shadow-lg active:scale-95;
 }
 
 .button--light {
@@ -165,32 +127,37 @@ svg {
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--color-grey);
+  @apply font-mono text-mono-xs uppercase text-grey;
 }
 
 .eyebrow--light {
-  color: rgba(255, 255, 255, 0.78);
+  @apply text-white/80;
 }
 
 .display-title {
-  font-family: var(--font-display);
-  font-size: clamp(3.25rem, 6vw, 5.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.06em;
+  @apply font-heading text-display-section;
   text-wrap: balance;
 }
 
 .display-title--hero {
-  max-width: 9ch;
+  @apply text-display-hero text-white;
+  max-width: 20ch;
+}
+
+.display-title--hero span:last-of-type {
+  @apply text-brand-500;
+}
+
+.display-title--serif {
+  @apply font-heading font-normal;
+}
+
+.display-title--white {
+  @apply text-white;
 }
 
 .display-title--dark {
-  color: var(--color-black);
+  @apply text-black;
 }
 
 .display-title--narrow {
@@ -198,16 +165,16 @@ svg {
 }
 
 .section-title {
-  font-family: var(--font-body);
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.06em;
+  @apply font-sans text-title font-medium;
   text-wrap: balance;
 }
 
 .section-title--compact {
   max-width: 10ch;
+}
+
+.copy-text {
+  @apply font-sans text-main font-normal;
 }
 
 .home-hero {

@@ -1,79 +1,76 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import { RouterLink, useRoute } from "vue-router";
+import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
-const route = useRoute();
-const isMenuOpen = ref(false);
+const isMenuOpen = ref(false)
 
 const navLinks = [
-  { label: "Product", to: "/product" },
-  { label: "Partners", to: "/partners" },
-  { label: "About", to: "/about" },
-  { label: "Brand", to: "/brand" },
-];
-
-const isHome = computed(() => route.path === "/");
+  { label: 'Product', to: '/product' },
+  { label: 'Zenerlink', to: '/zenerlink' },
+  { label: 'Partners', to: '/partners' },
+  { label: 'About', to: '/about' },
+  { label: 'Blog', to: '/blog' },
+]
 
 const closeMenu = () => {
-  isMenuOpen.value = false;
-};
+  isMenuOpen.value = false
+}
 </script>
 
 <template>
-  <header class="site-header">
-    <div :class="['nav-shell', { 'nav-shell--home': isHome }]">
-      <RouterLink class="brand-mark" to="/" @click="closeMenu">
-        <span class="brand-mark__icon" aria-hidden="true">
-          <svg viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M2 18H30M6 18C6 12.4772 10.4772 8 16 8C21.5228 8 26 12.4772 26 18M16 2V10M10 5L12.8 9.2M22 5L19.2 9.2"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </span>
+  <header class="header-container">
+    <div class="header-glass">
+      <RouterLink class="brand-mark brand-mark--header" to="/" @click="closeMenu">
         <span class="brand-mark__text">zieon energies</span>
       </RouterLink>
 
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
         <RouterLink
           v-for="link in navLinks"
           :key="link.to"
           :to="link.to"
-          class="nav-link"
-          active-class="nav-link--active"
+          class="nav-link-item"
+          active-class="!text-black !opacity-100"
         >
           {{ link.label }}
         </RouterLink>
       </nav>
 
-      <RouterLink class="nav-cta" to="/get-started">Get started</RouterLink>
+      <div class="flex items-center gap-4">
+        <RouterLink class="nav-cta-btn" to="/contact"> Get started </RouterLink>
 
-      <button
-        class="nav-toggle"
-        type="button"
-        :aria-expanded="isMenuOpen"
-        aria-label="Toggle navigation"
-        @click="isMenuOpen = !isMenuOpen"
-      >
-        <span></span>
-        <span></span>
-      </button>
+        <button
+          class="md:hidden flex flex-col gap-1.5 w-10 h-10 items-center justify-center bg-black/5 rounded-md transition-colors hover:bg-black/10"
+          type="button"
+          :aria-expanded="isMenuOpen"
+          aria-label="Toggle navigation"
+          @click="isMenuOpen = !isMenuOpen"
+        >
+          <span class="w-5 h-0.5 bg-black rounded-full"></span>
+          <span class="w-5 h-0.5 bg-black rounded-full"></span>
+        </button>
+      </div>
     </div>
 
-    <div v-if="isMenuOpen" class="mobile-nav">
+    <!-- Mobile Nav -->
+    <div
+      v-if="isMenuOpen"
+      class="absolute top-full left-6 right-6 mt-3 bg-white border border-black/10 rounded-xl p-4 shadow-2xl flex flex-col gap-1 md:hidden overflow-hidden"
+    >
       <RouterLink
         v-for="link in navLinks"
         :key="link.to"
         :to="link.to"
-        class="mobile-nav__link"
+        class="p-4 rounded-lg font-sans font-medium text-black/70 hover:text-black hover:bg-black/5 transition-colors"
         @click="closeMenu"
       >
         {{ link.label }}
       </RouterLink>
-      <RouterLink class="mobile-nav__cta" to="/get-started" @click="closeMenu">
+      <RouterLink
+        class="p-4 rounded-lg bg-brand-500 text-white text-center font-sans font-bold mt-2 shadow-lg active:scale-[0.98] transition-all"
+        to="/contact"
+        @click="closeMenu"
+      >
         Get started
       </RouterLink>
     </div>
@@ -81,35 +78,31 @@ const closeMenu = () => {
 </template>
 
 <style scoped>
-.mobile-nav {
-  position: absolute;
-  top: 100%;
-  left: 1rem;
-  right: 1rem;
-  background: white;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.mobile-nav__link {
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
-  color: var(--color-black);
+.brand-mark--header {
+  @apply flex items-center gap-2 shrink-0;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.mobile-nav__cta {
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
-  background: var(--color-gradient);
-  color: white;
-  text-align: center;
+.brand-mark--header .brand-mark__icon {
+  width: 1.5rem;
+  color: #f66f00; /* Zieon Orange */
+}
+
+.brand-mark--header .brand-mark__text {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
   font-weight: 500;
+  letter-spacing: -0.06em;
+  color: var(--color-black);
+  text-transform: none; /* Replicate the lowercase style from Partners page */
+}
+
+@media (max-width: 720px) {
+  .brand-mark--header .brand-mark__text {
+    font-size: 1.3rem;
+  }
+  .brand-mark--header .brand-mark__icon {
+    width: 1.25rem;
+  }
 }
 </style>

@@ -2,11 +2,10 @@
 import { onMounted } from "vue";
 import SiteHeader from "../components/site/SiteHeader.vue";
 import SiteFooter from "../components/site/SiteFooter.vue";
-import ProductHero from "../components/sections/product/ProductHero.vue";
-import ProductAppTeaser from "../components/sections/product/ProductAppTeaser.vue";
-import ProductProblemSolution from "../components/sections/product/ProductProblemSolution.vue";
-import ProductMeter from "../components/sections/product/ProductMeter.vue";
-import ProductTech from "../components/sections/product/ProductTech.vue";
+import ZenerlinkHero from "../components/sections/zenerlink/ZenerlinkHero.vue";
+import ZenerlinkFeatures from "../components/sections/zenerlink/ZenerlinkFeatures.vue";
+import ZenerlinkConnection from "../components/sections/zenerlink/ZenerlinkConnection.vue";
+import ZenerlinkDownload from "../components/sections/zenerlink/ZenerlinkDownload.vue";
 import { gsap } from "../lib/gsap";
 
 onMounted(() => {
@@ -34,19 +33,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-brand-50 selection:bg-brand-500 selection:text-white">
+  <div class="min-h-screen bg-white selection:bg-brand-500 selection:text-white">
     <SiteHeader />
 
     <main>
-      <ProductHero />
-      <ProductAppTeaser />
       <div class="stack-section z-[1]">
-        <ProductProblemSolution />
+        <ZenerlinkHero />
       </div>
       <div class="stack-section z-[2]">
-        <ProductMeter />
+        <ZenerlinkFeatures />
       </div>
-      <ProductTech />
+      <ZenerlinkConnection />
+      <ZenerlinkDownload />
     </main>
 
     <SiteFooter />

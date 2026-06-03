@@ -4,10 +4,11 @@ import { RouterLink } from "vue-router";
 const links = [
   { label: "Home", to: "/" },
   { label: "Product", to: "/product" },
+  { label: "Zenerlink", to: "/zenerlink" },
   { label: "Partners", to: "/partners" },
   { label: "About", to: "/about" },
-  { label: "Brand", to: "/brand" },
-  { label: "Get started", to: "/get-started" },
+  { label: "Blog", to: "/blog" },
+  { label: "Contact", to: "/contact" },
 ];
 </script>
 
